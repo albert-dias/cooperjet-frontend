@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import bgCity from '../../assets/bgBody.png';
+//import bgCity from '../../assets/bgBody.png';
 
 export const Container = styled.div`
   display: flex;
