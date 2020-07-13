@@ -12,7 +12,7 @@ export const Container = styled.div`
 
   h1{
     color: #fff;
-    font-size:6.0em;
+    font-size:20px;
   }
 
 `;
