@@ -6,7 +6,7 @@ import logo from '../../assets/logo.png'
 const Development: React.FC = () => {
   return(
     <Container>
-      <img src={logo} alt="Cooperjet" width="70%" />
+      <img src={logo} alt="Cooperjet" width="66%" />
       <h1>em desenvolvimento</h1>
     </Container>
   )

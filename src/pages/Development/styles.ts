@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-//import bgCity from '../../assets/bgBody.png';
+import bgCity from '../../assets/bg_auth.png';
 
 export const Container = styled.div`
   display: flex;
@@ -9,6 +9,8 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   height: 90vh;
+  background: url(${bgCity}) no-repeat center;
+  background-size: cover;
 
   h1{
     color: #fff;
