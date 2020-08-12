@@ -2,10 +2,12 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom';
 
 import Development from '../pages/Development';
+import SignIn from '../pages/SignIn';
 
 const Routes: React.FC = () => (
   <Switch>
-    <Route path="/" component={Development}/>
+    <Route path="/" exact component={Development}/>
+    <Route path="/login" component={SignIn}/>
   </Switch>
 );
 
