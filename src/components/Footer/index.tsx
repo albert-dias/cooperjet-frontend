@@ -62,7 +62,8 @@ const Footer: React.FC = () => {
         <Localization>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.8991528009747!2d-35.2054894852326!3d-5.8697986957472255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ffba2f713a97%3A0x88e376b475d0c670!2sCooperjet%20Entregas%20Inteligentes!5e0!3m2!1spt-BR!2sbr!4v1597443484177!5m2!1spt-BR!2sbr"
             width="100%"
-            height="50%">
+            height="50%"
+            title="Endereço base">
           </iframe>
           <p>R. Divinópolis, 4891 - loja 03, Neópolis, Natal - RN</p>
         </Localization>
