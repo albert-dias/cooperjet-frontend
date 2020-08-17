@@ -17,11 +17,12 @@ export const Limitation = styled.div`
   flex: 1;
   max-width: 960px;
   justify-content: center;
-  padding: 30px 10px;
+  padding: 30px;
 `;
 
 export const MenuBarFooter = styled.ul`
   width: 280px;
+  flex:1;
 
   li{
     display: flex;
@@ -51,6 +52,7 @@ export const MenuBarFooter = styled.ul`
 
 export const Socials = styled.div`
   width: 280px;
+  flex:1;
   padding: 20px 0;
   margin: 0 50px;
 
@@ -97,6 +99,7 @@ export const Social = styled.div`
 `;
 export const Localization = styled.div`
   width: 280px;
+  flex:1;
 
 
   iframe {
