@@ -52,7 +52,6 @@ export const MenuBarFooter = styled.ul`
 
 export const Socials = styled.div`
   width: 280px;
-  flex:1;
   padding: 20px 0;
   margin: 0 50px;
 
