@@ -7,7 +7,7 @@ const Menu: React.FC = () => {
   return(
     <Container>
       <Limitation>
-      <Link to="/home"><img src={logo} alt="Cooperjet" height="80px" /></Link>
+      <Link to="/home"><img src={logo} alt="Cooperjet" width="100%" /></Link>
         <MenuBar>
           <li>
             <Link to="/home">Home</Link>

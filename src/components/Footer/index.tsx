@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
         <Socials>
           <h3>Redes Sociais</h3>
           <Social>
-            <a href="https://cooperjet.com.br">
+            <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                 <g id="Grupo_18" data-name="Grupo 18" transform="translate(-140 -3238.583)">
                   <path id="Caminho_40" className="BG" data-name="Bg" d="M47.52,36.034a20,20,0,1,1-20-19.9,20,20,0,0,1,20,19.9Z" transform="translate(132.48 3222.453)" fill="#494d56"/>
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
             </a>
           </Social>
           <Social>
-            <a href="https://cooperjet.com.br">
+            <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                 <g id="Grupo_19" data-name="Grupo 19" transform="translate(-140 -3083.818)">
                   <g id="Grupo_16" data-name="Grupo 16" transform="translate(609.564 654)">
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
             </a>
           </Social>
           <Social>
-            <a href="https://cooperjet.com.br">
+            <a href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                 <g id="Grupo_20" data-name="Grupo 20" transform="translate(753.65 -2203.082)">
                   <path id="Caminho_45" className="BG" data-name="Bg" d="M42.55,36.21a19.9,19.9,0,0,1-18.189,19.9H22.646a22,22,0,0,1-4.381-.476A19.994,19.994,0,1,1,42.55,36.115Z" transform="translate(-756.199 2186.973)" fill="#494d56"/>
@@ -60,8 +60,7 @@ const Footer: React.FC = () => {
           </Social>
         </Socials>
         <Localization>
-          <iframe title="Geolocalização base cooperjet"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.8991528009747!2d-35.2054894852326!3d-5.8697986957472255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ffba2f713a97%3A0x88e376b475d0c670!2sCooperjet%20Entregas%20Inteligentes!5e0!3m2!1spt-BR!2sbr!4v1597443484177!5m2!1spt-BR!2sbr"
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.8991528009747!2d-35.2054894852326!3d-5.8697986957472255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ffba2f713a97%3A0x88e376b475d0c670!2sCooperjet%20Entregas%20Inteligentes!5e0!3m2!1spt-BR!2sbr!4v1597443484177!5m2!1spt-BR!2sbr"
             width="100%"
             height="50%">
           </iframe>

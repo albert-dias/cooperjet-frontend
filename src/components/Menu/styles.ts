@@ -17,13 +17,20 @@ export const Limitation = styled.div`
   max-width: 960px;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0;
+  padding: 30px 10px;
+
+  img{
+    flex: 1;
+    max-width: 250px;
+    width: 100%;
+  }
 `;
 
 export const MenuBar = styled.ul`
+  display: flex;
   li{
-    display:inline-flex;
-    padding: 10px 15px;
+    display:inline;
+    padding: 8px 15px;
     transition: transform 0.4s;
   }
 
@@ -38,7 +45,7 @@ export const MenuBar = styled.ul`
 
   & li:last-child{
     background:#FF5100;
-    padding: 5px 15px;
+    padding: 8px 15px;
     border-radius: 5px;
   }
 

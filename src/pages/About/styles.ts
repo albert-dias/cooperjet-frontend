@@ -27,30 +27,32 @@ export const Container = styled.div`
 `;
 
 export const Limitation = styled.div`
-  max-width: 960px;
-  justify-content: space-between;
-  padding: 30px 0;
-  flex-direction: row;
   display: flex;
+  flex-wrap: wrap;
   flex: 1;
-  align-items: start;
+  max-width:960px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 30px 10px;
+  align-items: center;
 
   img{
+    max-width: 420px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 `;
 
 export const RightBox = styled.div`
-  flex: 1;
+  max-width: 500px;
   flex-direction: column;
-  margin-left: 40px;
+  padding-top: 30px;
 `;
 
 export const LeftBox = styled.div`
-  flex: 1;
+  max-width: 500px;
   flex-direction: column;
-  margin-right: 40px;
+  padding-bottom: 30px;
 
   h1{ text-align: right}
 `;

@@ -13,16 +13,15 @@ export const Container = styled.div`
 
 export const Limitation = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex: 1;
   max-width: 960px;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0;
+  justify-content: center;
+  padding: 30px 10px;
 `;
 
 export const MenuBarFooter = styled.ul`
-  flex: 1;
-  margin-right: 50px;
+  width: 280px;
 
   li{
     display: flex;
@@ -51,9 +50,9 @@ export const MenuBarFooter = styled.ul`
 `;
 
 export const Socials = styled.div`
-  flex: 1;
-  margin-right: 50px;
-  padding: 0 30px;
+  width: 280px;
+  padding: 20px 0;
+  margin: 0 50px;
 
   h3{
     color:  #FF5100;
@@ -65,6 +64,7 @@ export const Socials = styled.div`
 `;
 export const Social = styled.div`
   display: flex;
+  align-items: center;
 
   a{
     display: flex;
@@ -96,9 +96,13 @@ export const Social = styled.div`
   }
 `;
 export const Localization = styled.div`
+  width: 280px;
+
+
   iframe {
     border: none;
     border-radius: 6px;
+    height:100%;
   }
   p{
     color: #fff;
