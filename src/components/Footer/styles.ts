@@ -53,7 +53,7 @@ export const MenuBarFooter = styled.ul`
 export const Socials = styled.div`
   width: 280px;
   padding: 20px 0;
-  margin: 0 50px;
+  margin: 0 30px;
 
   h3{
     color:  #FF5100;
