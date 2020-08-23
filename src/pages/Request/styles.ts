@@ -37,16 +37,30 @@ export const Form = styled.div`
 
   div.Row{
     display: flex;
+    @media (max-width: 780px){
+      flex-wrap: wrap;
+    }
   }
 
   input.Minimal{
     max-width: 20%;
     margin-right: 5%;
+
+    @media (max-width: 780px){
+      max-width:100%;
+      width:100%;
+      margin-right: 0;
+    }
   }
 
   input.Medium{
     max-width: 75%;
     flex: 1;
+
+    @media (max-width: 780px){
+      max-width:100%;
+      width:100%;
+    }
   }
 
   select{
