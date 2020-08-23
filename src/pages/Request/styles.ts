@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Seta from '../../assets/Polygon.png';
+
 export const Container = styled.div`
   background: #fff;
   display: flex;
@@ -67,8 +69,9 @@ export const Form = styled.div`
     -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
    -moz-appearance: none; /* Remove estilo padrão do FireFox */
    appearance: none; /* Remove estilo padrão do FireFox*/
-   background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat;  /* Imagem de fundo (Seta) */
-   background-position: 99% center;  /*Posição da imagem do background*/
+   background: url(${Seta}) no-repeat;  /* Imagem de fundo (Seta) */
+   background-position: 97% center;
+   background-size: 20px; /*Posição da imagem do background*/
   }
 
   textarea{
