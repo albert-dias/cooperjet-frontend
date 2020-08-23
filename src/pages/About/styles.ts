@@ -33,7 +33,7 @@ export const Limitation = styled.div`
   max-width:960px;
   width: 100%;
   justify-content: space-between;
-  padding: 30px 10px;
+  padding: 30px 20px;
   align-items: center;
 
   img{

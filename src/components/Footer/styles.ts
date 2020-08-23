@@ -14,10 +14,10 @@ export const Container = styled.div`
 export const Limitation = styled.div`
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
   max-width: 960px;
   justify-content: center;
   padding: 30px;
+
 `;
 
 export const MenuBarFooter = styled.ul`
@@ -48,10 +48,20 @@ export const MenuBarFooter = styled.ul`
   & li:last-child{
     border: none;
   }
+
+  @media (max-width: 780px){
+    min-width: 355px;
+    width: 100%;
+
+    li{
+      justify-content: center;
+    }
+  }
 `;
 
 export const Socials = styled.div`
   width: 280px;
+  flex: 1;
   padding: 20px 0;
   margin: 0 30px;
 
@@ -61,6 +71,12 @@ export const Socials = styled.div`
     font-weight: 400;
     text-align: center;
     margin-bottom: 10px;
+  }
+
+  @media (max-width: 780px){
+    min-width: 355px;
+    width: 100%;
+    margin: 0;
   }
 `;
 export const Social = styled.div`
@@ -95,6 +111,9 @@ export const Social = styled.div`
       }
     }
   }
+  @media (max-width: 780px){
+    justify-content: center;
+  }
 `;
 export const Localization = styled.div`
   width: 280px;
@@ -111,5 +130,11 @@ export const Localization = styled.div`
     font-family: Ubuntu;
     font-size: 12px;
     margin-top: 5px;
+  }
+
+  @media (max-width: 780px){
+    min-width: 355px;
+    width: 100%;
+    justify-content: center;
   }
 `;
