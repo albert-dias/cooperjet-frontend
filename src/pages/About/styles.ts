@@ -44,13 +44,13 @@ export const Limitation = styled.div`
 `;
 
 export const RightBox = styled.div`
-  max-width: 500px;
+  max-width: 400px;
   flex-direction: column;
   padding-top: 30px;
 `;
 
 export const LeftBox = styled.div`
-  max-width: 500px;
+  max-width: 400px;
   flex-direction: column;
   padding-bottom: 30px;
 

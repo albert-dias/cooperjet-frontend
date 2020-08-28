@@ -24,12 +24,51 @@ export const Limitation = styled.div`
     max-width: 250px;
     width: 100%;
   }
+
+  .Login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p{
+      color: #fff;
+      font-family: Ubuntu;
+      margin-right: 10px;
+      display:none;
+    }
+
+    svg{
+      width: 35px;
+      margin-right: 10px;
+    }
+
+    a{
+      color: #fff;
+      font-family: Ubuntu;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.4s;
+      font-size: 12px;
+    }
+
+    a:last-child{
+      border-left: 1px solid #fff;
+    }
+
+    a:hover{
+      color:#ff5100;
+    }
+  }
 `;
 
 export const MenuBar = styled.ul`
   display: flex;
+  justify-content: center;
+  align-items: center;
   li{
-    display:inline;
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
     padding: 8px 15px;
     transition: transform 0.4s;
   }
@@ -43,13 +82,13 @@ export const MenuBar = styled.ul`
     color:#FF5100;
   }
 
-  & li:last-child{
+  & li.ButtomRequest{
     background:#FF5100;
     padding: 8px 15px;
     border-radius: 5px;
   }
 
-  & li:last-child:hover a{
+  & li.ButtomRequest:hover a{
     color: #fff
   }
 
@@ -59,4 +98,5 @@ export const MenuBar = styled.ul`
     font-family: Ubuntu;
     transition: color 0.4s;
   }
+
 `;
