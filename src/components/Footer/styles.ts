@@ -138,3 +138,16 @@ export const Localization = styled.div`
     justify-content: center;
   }
 `;
+
+export const Copyright = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+
+  p{
+    font-family: Ubuntu;
+    font-size: 12px;
+    color: #ff5100;
+  }
+`;

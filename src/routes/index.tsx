@@ -8,6 +8,7 @@ import About from '../pages/About';
 import Home from '../pages/Home';
 import Request from '../pages/Request';
 import Contact from '../pages/Contact';
+import DashBoard from '../pages/Dashboard';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -18,6 +19,7 @@ const Routes: React.FC = () => (
     <Route path="/home" component={Home}/>
     <Route path="/solicitar" component={Request}/>
     <Route path="/contato" component={Contact}/>
+    <Route path="/dashboard" component={DashBoard}/>
   </Switch>
 );
 
