@@ -34,6 +34,11 @@ export const GridContainer = styled.div`
   justify-content: flex-start;
   margin-bottom: 30px;
 
+  @media (max-width: 939px){
+      justify-content: center;
+      max-width: 100%;
+    }
+
   h2{
     color: #fff;
     font-family: Ubuntu;
@@ -42,6 +47,12 @@ export const GridContainer = styled.div`
     padding: 5px 10px;
     border-radius: 4px;
     font-size: 18px;
+
+    @media (max-width: 940px){
+      max-width: 550px;
+      min-width: 400px;
+      width: 100%;
+    }
   }
   .Pending{
     background:#BBA21D;

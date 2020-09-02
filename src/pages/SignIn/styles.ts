@@ -27,18 +27,7 @@ export const Wrap = styled.div`
     margin: 40px 0;
   }
 
-  input{
-    max-width: 80%;
-    height: 40px;
-    padding: 10px;
-    border-radius: 6px;
-    margin-bottom: 18px;
-    width: 100%;
-    border: none;
-  }
-
   button {
-    max-width: 80%;
     height: 40px;
     padding: 10px;
     border-radius: 6px;
