@@ -36,6 +36,12 @@
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
         "prettier/prettier": "error",
         "import/prefer-default-export": "off",
+        "@typescript-eslint/explic-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
         "import/extensions": [
             "error",
             "ignorePackages",
