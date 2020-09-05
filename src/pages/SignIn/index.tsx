@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form } from '@unform/web';
+import api from '../../services/api';
 
 import { Container, Wrap } from './styles';
 import logo from '../../assets/logo.png'

@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-import Seta from '../../assets/Polygon.png';
 
 export const Container = styled.div`
-  background: #fff;
+  background: #ddd;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,8 +14,10 @@ export const Wrapper = styled.div`
   width: 100%;
 `;
 
-export const Form = styled.div`
+export const ContentForm = styled.div`
   display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   flex-wrap: wrap;
 
@@ -28,15 +29,6 @@ export const Form = styled.div`
     margin-bottom: 20px;
   }
 
-  input, select{
-    border: 1px solid #999;
-    height: 35px;
-    background: #fff;
-    margin-bottom:15px;
-    border-radius: 6px;
-    padding: 4px 10px;
-  }
-
   div.Row{
     display: flex;
     @media (max-width: 780px){
@@ -44,52 +36,50 @@ export const Form = styled.div`
     }
   }
 
-  input.Minimal{
-    max-width: 20%;
-    margin-right: 5%;
-
-    @media (max-width: 780px){
-      max-width:100%;
-      width:100%;
-      margin-right: 0;
-    }
+  input{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
   }
 
-  input.Medium{
-    max-width: 75%;
-    flex: 1;
+  #sender_neighborhood, #recipient_neighborhood, #payment{
+    border: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
+    width: 380px;
 
-    @media (max-width: 780px){
-      max-width:100%;
-      width:100%;
+    background-color: #fff;
+    margin-top: 0;
+    height: 40px;
+    border-radius: 6px;
+
+    > div{
+      border-radius: 6px;
+      border: 0px;
     }
-  }
-
-  select{
-    -webkit-appearance: none;  /* Remove estilo padrão do Chrome */
-   -moz-appearance: none; /* Remove estilo padrão do FireFox */
-   appearance: none; /* Remove estilo padrão do FireFox*/
-   background: url(${Seta}) no-repeat;  /* Imagem de fundo (Seta) */
-   background-position: 97% center;
-   background-size: 20px; /*Posição da imagem do background*/
   }
 
   textarea{
-    border: 1px solid #999;
+    border: 0;
     height: 120px;
     background: #fff;
-    margin-bottom:50px;
     border-radius: 6px;
-    padding: 4px 10px;
+    padding: 10px;
+    width: 380px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
   }
 
   button{
+    width: 380px;
     background: #fd5100;
     color: #fff;
     font-family: Ubuntu;
     font-weight: 400;
     border: none;
-    height: 35px;
+    height: 40px;
     font-size: 18px;
     border-radius: 6px;
     margin-top: 80px;
@@ -108,70 +98,29 @@ export const ColumnLeft = styled.div`
 `;
 
 export const ColumnRight = styled.div`
+  max-width: 400px;
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 0 20px 0 50px;
+  flex-wrap: wrap;
+  padding: 0 20px 0 0px;
 
   @media (max-width: 780px){
     padding: 0 20px;
   }
 
-  span{
+  > span{
+    width: 380px;
     font-family: Ubuntu;
     padding: 10px;
-    border: 1px solid #999;
+    border: 0;
     color: #999;
     border-radius: 6px;
     display: block;
     margin-bottom: 25px;
-    width: 30%;
+    width: 100%;
+    background: #fff;
 
     @media (max-width: 780px){
       width: 100%;
-    }
-  }
-
-  div{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-bottom: 20px;
-
-    input{
-      margin: 0;
-      margin-right: 10px;
-    }
-    input[type='radio']:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        position: relative;
-        background-color: #d1d3d1;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-        top: 7px;
-        left: -3px;
-    }
-
-    input[type='radio']:checked:after {
-        width: 15px;
-        height: 15px;
-        border-radius: 15px;
-        position: relative;
-        background-color: #ff5100;
-        content: '';
-        display: inline-block;
-        visibility: visible;
-        border: 2px solid white;
-    }
-
-    label{
-      font-family: Ubuntu;
-      font-style: italic;
-      font-weight: 400;
     }
   }
 `;

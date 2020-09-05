@@ -1,5 +1,5 @@
 import React, {
-  InputHTMLAttributes,
+  TextareaHTMLAttributes,
   useEffect,
   useState,
   useRef,
@@ -12,13 +12,13 @@ import { useField } from '@unform/core';
 
 import { Container, Error } from './styles';
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   name: string;
   icon?: React.ComponentType<IconBaseProps>;
 }
 
-const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+const TextArea: React.FC<TextAreaProps> = ({ name, icon: Icon, ...rest }) => {
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
 
@@ -45,13 +45,13 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
   return (
     <Container isErrored={!!error} isFilled={isFilled} isFocused={isFocused} >
       {Icon && <Icon size={20} />}
-      <input
+      <textarea
         onFocus={handleInputFocus}
         onBlur={handleInputBlur}
         defaultValue={defaultValue}
         ref={inputRef}
         {...rest}
-      />
+      ></textarea>
       {error && (
         <Error title={error}>
           <FiAlertCircle color="#c53030" size={20} />
@@ -61,4 +61,4 @@ const Input: React.FC<InputProps> = ({ name, icon: Icon, ...rest }) => {
   );
 };
 
-export default Input;
+export default TextArea;

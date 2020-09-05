@@ -32,7 +32,7 @@ export const Limitation = styled.div `
 
 `;
 
-export const Form = styled.div `
+export const ContentForm = styled.div `
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -45,34 +45,35 @@ export const Form = styled.div `
     margin-bottom: 20px;;
   }
 
-  input, select{
-    border: 1px solid #999;
-    height: 35px;
-    background: #fff;
-    margin-bottom:15px;
-    border-radius: 6px;
-    padding: 4px 10px;
+  input{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
   }
 
   textarea{
-    border: 1px solid #999;
-    height: 160px;
+    border: 0;
+    height: 120px;
     background: #fff;
-    margin-bottom:50px;
     border-radius: 6px;
-    padding: 4px 10px;
+    padding: 10px;
+    width: 380px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400px;
+    font-size: 14px;
   }
 
   button{
+    width: 380px;
     background: #fd5100;
     color: #fff;
     font-family: Ubuntu;
     font-weight: 400;
     border: none;
-    height: 35px;
+    height: 40px;
     font-size: 18px;
     border-radius: 6px;
-    margin-top: 30px;
+    margin-top: 80px;
   }
 `;
 export const Section = styled.div `
@@ -94,6 +95,7 @@ export const Section = styled.div `
   }
 
   img{
+    margin-bottom: -1px;
     margin-top: -135px;
     width: 480px;
     display: flex;
