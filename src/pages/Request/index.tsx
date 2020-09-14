@@ -66,7 +66,7 @@ const Request: React.FC = () => {
   const [ isDestination, setIsDestination ] = useState<string>();
   const [ isPrice, setIsPrice ] = useState<PriceNeighborhood>({price: 0} as PriceNeighborhood);
   const [isLocation, setIsLocation] = useState<PriceNeighborhood[]>([] as PriceNeighborhood[]);
-  const [isBalance, setIsBalance]=useState<PriceData>({} as PriceData);
+  // const [isBalance, setIsBalance]=useState<PriceData>({} as PriceData);
   const formRef = useRef<FormHandles>(null);
   const { user, token } = useAuth();
   const { addToast } = useToast();
@@ -217,28 +217,28 @@ const Request: React.FC = () => {
 
   },[FilterPrice, isSend, isDestination ]);
 
-  const checkBalance = useCallback(({ payment }) => {
-    const paymentMethod = payment;
+  // const checkBalance = useCallback(({ payment }) => {
+  //   const paymentMethod = payment;
 
-    (user.balance === null ) ? setIsBalance({balance: 0}) : setIsBalance({ balance: Number(user.balance)})
+  //   (user.balance === null ) ? setIsBalance({balance: 0}) : setIsBalance({ balance: Number(user.balance)})
 
-    console.log(isBalance);
+  //   console.log(isBalance);
 
-    if (paymentMethod === 'voucher' && Number(isBalance) < isPrice.price){
-      addToast({
-        type: 'error',
-        title: 'Saldo insuficiente',
-        description: 'Selecione outro método de pagamento ou faça uma recarga!',
-      });
-    }
+  //   if (paymentMethod === 'voucher' && Number(isBalance) < isPrice.price){
+  //     addToast({
+  //       type: 'error',
+  //       title: 'Saldo insuficiente',
+  //       description: 'Selecione outro método de pagamento ou faça uma recarga!',
+  //     });
+  //   }
 
-    const resbBalance = isBalance.balance - isPrice.price;
+  //   const resbBalance = isBalance.balance - isPrice.price;
 
-    setIsBalance({ balance: resbBalance });
+  //   setIsBalance({ balance: resbBalance });
 
-    return isBalance;
+  //   return isBalance;
 
-  }, [user.balance, addToast, isBalance, isPrice]);
+  // }, [user.balance, addToast, isBalance, isPrice]);
 
 
 
