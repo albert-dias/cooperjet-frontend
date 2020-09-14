@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
+import api from '../../services/api';
 
 import {  Container,
           Limitation,
@@ -22,6 +23,23 @@ import SaleBrasa from '../../assets/salebrasa.png';
 import oMexicano from '../../assets/omexicano.png';
 
 const Home: React.FC = () => {
+  const[isUsers, setIsUsers] = useState();
+  const[isQtdAppoitments, setIsQtdAppointments] = useState([]);
+
+  useEffect(() => {
+    async function loadData(){
+      const response = await api.get('/appointments/datahome');
+      console.log(response.data);
+
+      const { qtdAppointments, qtdUsers } = response.data;
+
+      setIsQtdAppointments(qtdAppointments);
+      setIsUsers(qtdUsers);
+    }
+
+    loadData();
+  }, [])
+
   return(
     <>
       <Menu />
@@ -81,14 +99,14 @@ const Home: React.FC = () => {
       <Section>
         <Feedbacks>
           <Feedback>
-            <h2>433</h2>
+          <h2>{ isUsers }</h2>
             <strong>Clientes satisfeitos</strong>
-            <p>melhorando a cada dia</p>
+            <p>usam nossos serviços com frequência</p>
           </Feedback>
           <Feedback>
-            <h2>433</h2>
+            <h2>{isQtdAppoitments}</h2>
             <strong>Ordens de serviço</strong>
-            <p>melhorando a cada dia</p>
+            <p>Todas finalizadas com sucesso!</p>
           </Feedback>
           <Feedback>
             <h2>433</h2>
@@ -102,19 +120,19 @@ const Home: React.FC = () => {
           <h1>Nossos valores</h1>
           <PillarCard>
             <strong>Agilidade</strong>
-            <p>melhorando a cada dia</p>
+            <p>Focandos em entregas rádipas pra melhor atende-los</p>
           </PillarCard>
           <PillarCard>
             <strong>Qualidade</strong>
-            <p>melhorando a cada dia</p>
+            <p>Motoboys capacitados para facilitar o seu trabalho</p>
           </PillarCard>
           <PillarCard>
             <strong>Estratégia</strong>
-            <p>melhorando a cada dia</p>
+            <p>Buscando sempre as melhores rotas da região</p>
           </PillarCard>
           <PillarCard>
             <strong>Satisfatoriedade</strong>
-            <p>melhorando a cada dia</p>
+            <p>Nossa prioridade é deixar nossos clientes satisfeitos</p>
           </PillarCard>
         </Pillars>
       </PillarsSection>

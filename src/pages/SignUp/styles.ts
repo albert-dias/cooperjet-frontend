@@ -39,4 +39,16 @@ export const Wrap = styled.div`
     background-color: #FF5100;
     color: #fff;
   }
+
+  a{
+    color: #fff;
+    font-family: Ubuntu;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.4s;
+  }
+
+  a:hover{
+    color: #FF5100;
+  }
 `;

@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <Limitation>
           <MenuBarFooter>
             <li>
-              <Link to="/home">Home</Link>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <Link to="/sobre">Quem somos</Link>

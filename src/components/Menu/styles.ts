@@ -30,16 +30,39 @@ export const Limitation = styled.div`
     align-items: center;
     justify-content: center;
 
-    p{
-      color: #fff;
-      font-family: Ubuntu;
+    div{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: right;
+      justify-content: center;
       margin-right: 10px;
-      display:none;
+
+      p{
+        color: #fff;
+        font-family: Ubuntu;
+        text-align: right;
+      }
+
+      span{
+        color: #fff;
+        font-family: Ubuntu;
+        font-size: 10px;
+        margin-top: 5px;
+        text-align: right;
+      }
     }
 
-    svg{
+    button{
+      background: transparent;
+      border: none;
+      margin-right: 10px;
+    }
+
+    img{
       width: 35px;
       margin-right: 10px;
+      color: #ff5100;
     }
 
     a{

@@ -21,6 +21,10 @@ export const ContentForm = styled.div`
   width: 100%;
   flex-wrap: wrap;
 
+  @media (max-width: 849px){
+    justify-content: center;
+    }
+
   h2{
     color: #fd5100;
     font-family: Ubuntu;
@@ -92,7 +96,8 @@ export const ColumnLeft = styled.div`
   flex: 1;
   padding: 0 50px 0 20px;
 
-  @media (max-width: 780px){
+  @media (max-width: 849px){
+    align-items: center;
     padding: 0 20px;
   }
 `;
@@ -100,10 +105,14 @@ export const ColumnLeft = styled.div`
 export const ColumnRight = styled.div`
   max-width: 400px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex: 1;
   padding: 0 20px 0 0px;
 
-  @media (max-width: 780px){
+  @media (max-width: 849px){
+    align-items: center;
+    padding: 0 20px;
+    max-width: 849px;
     padding: 0 20px;
   }
 
@@ -119,8 +128,8 @@ export const ColumnRight = styled.div`
     width: 100%;
     background: #fff;
 
-    @media (max-width: 780px){
-      width: 100%;
+    @media (max-width: 849px){
+      max-width: 380px;
     }
   }
 `;
@@ -149,7 +158,7 @@ export const Section = styled.div`
     display: flex;
   }
 
-  @media (max-width: 780px){
+  @media (max-width: 849px){
     justify-content: center;
     img{
       display: none;
