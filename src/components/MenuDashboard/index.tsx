@@ -18,13 +18,10 @@ const Menu: React.FC = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/sobre">Quem somos</Link>
+            <Link to="/">Mensagens</Link>
           </li>
           <li>
-            <Link to="/contato">Contato</Link>
-          </li>
-          <li className="ButtomRequest">
-            <Link to="/solicitar">CHAME JÁ!</Link>
+            <Link to="/dashboard">Pedidos</Link>
           </li>
         </MenuBar>
         <div className="Login" >
@@ -32,7 +29,7 @@ const Menu: React.FC = () => {
           <>
             <div>
               <p>{user.name}</p>
-              <span>{(user.balance === null ) ? 'R$ 0,00' : `R$ ${user.balance},00`}</span>
+              {/* <span>{(user.balance === null ) ? 'R$ 0,00' : `R$ ${user.balance},00`}</span> */}
             </div>
             <button onClick={signOut} type='button'>
               <FiPower color="#ff5100" size={20}/>

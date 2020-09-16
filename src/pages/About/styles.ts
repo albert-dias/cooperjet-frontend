@@ -35,11 +35,15 @@ export const Limitation = styled.div`
   justify-content: space-between;
   padding: 30px 20px;
   align-items: center;
+  @media (max-width: 865px){
+    justify-content: center;
+  }
 
   img{
     max-width: 420px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    filter: blur(6px);
   }
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Menu from '../../components/Menu';
+import MenuDashboard from '../../components/MenuDashboard';
 import Footer from '../../components/Footer';
 
 
@@ -9,7 +9,7 @@ import { Container, Limitation, GridContainer, Todos, Todo, Row, Cel } from './s
 const Dashboard: React.FC = () => {
   return (
     <>
-      <Menu />
+      <MenuDashboard />
       <Container>
         <Limitation>
           <h1>Pedidos</h1>
