@@ -107,7 +107,7 @@ export const Feedbacks = styled.div`
   font-family: Ubuntu;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 300px;
+  padding: 100px 0 210px;
 `;
 
 export const Feedback = styled.div`
