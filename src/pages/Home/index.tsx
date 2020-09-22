@@ -13,8 +13,6 @@ import {  Container,
           Pillars,
           PillarCard,
           Transition,
-          Campanha,
-          CLimitation,
         } from './styles';
 
 import Menu from '../../components/Menu';

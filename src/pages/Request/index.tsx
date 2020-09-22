@@ -8,6 +8,7 @@ import api from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
 import { jsPDF } from 'jspdf';
+import Logo from '../../assets/logo.png'
 
 import Select from '../../components/Select';
 import Menu from '../../components/Menu';
@@ -62,7 +63,7 @@ interface SenderData extends RecipientData{
 }
 
 const Request: React.FC = () => {
-  const [ isSend, setIsSend ] = useState<string>();
+  // const [ isSend, setIsSend ] = useState<string>();
   const [ isDestination, setIsDestination ] = useState<string>();
   const [ isPrice, setIsPrice ] = useState<PriceNeighborhood>({price: 0} as PriceNeighborhood);
   const [isLocation, setIsLocation] = useState<PriceNeighborhood[]>([] as PriceNeighborhood[]);
@@ -305,7 +306,48 @@ const Request: React.FC = () => {
         headers: {'authorization': `Bearer ${token}`}
       });
 
-      console.log(response.data)
+      const appointment = response.data;
+
+      const doc = new jsPDF();
+      doc.rect(0, 0, 500, 30, "F");
+      doc.addImage(Logo, 'PNG', 70, 5, 63, 21)
+
+      doc.text(`Nº: ${appointment.number}`, 10, 40);
+      doc.text(`Valor: R$${appointment.price},00`, 110, 40);
+
+      doc.text(`Retirada`, 10, 50);
+      doc.text(`Pagamento: ${appointment.payment}`, 110, 50);
+
+      doc.text(`Nome: ${appointment.sender_name}`, 10, 60);
+      doc.text(`Contato: ${appointment.sender_cel}`, 110, 60);
+
+      doc.text(`Endereço: ${appointment.sender_address}`, 10, 70);
+
+      doc.text(`Número: ${appointment.sender_number}`, 10, 80);
+      doc.text(`Complemento: ${appointment.sender_complement}`, 60, 80);
+
+      doc.text(`Bairro: ${appointment.sender_neighborhood}`, 10, 90);
+      doc.text(`Cidade: ${appointment.sender_city}`, 110, 90);
+
+      appointment.sender_note && doc.text(`Observação: ${appointment.sender_note}`, 10, 100);
+
+      doc.text(`Entrega`, 10, 120);
+
+      doc.text(`Nome: ${appointment.recipient_name}`, 10, 130);
+      doc.text(`Contato: ${appointment.recipient_cel}`, 110, 130);
+
+      doc.text(`Endereço: ${appointment.recipient_address}`, 10, 140);
+
+      doc.text(`Número: ${appointment.recipient_number}`, 10, 150);
+      doc.text(`Complemento: ${appointment.recipient_complement}`, 60, 150);
+
+      doc.text(`Bairro: ${appointment.recipient_neighborhood}`, 10, 160);
+      doc.text(`Cidade: ${appointment.recipient_city}`, 110, 160);
+
+      appointment.recipient_note && doc.text(`Observação: ${appointment.recipient_note}`, 10, 170);
+
+      doc.save(`${appointment.number}.pdf`);
+
       // createAppointment(sender, recipient, payment);
 
       addToast({

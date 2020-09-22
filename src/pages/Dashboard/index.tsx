@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import {jsPDF} from 'jspdf';
+import { jsPDF } from 'jspdf';
 
 import MenuDashboard from '../../components/MenuDashboard';
 import Footer from '../../components/Footer';
