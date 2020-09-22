@@ -128,7 +128,7 @@ export const Localization = styled.div`
   p{
     color: #fff;
     font-family: Ubuntu;
-    font-size: 12px;
+    font-size: 10px;
     margin-top: 5px;
   }
 

@@ -1,4 +1,6 @@
+import { FiMenu } from 'react-icons/fi';
 import styled from 'styled-components';
+import { animated } from 'react-spring';
 
 //import bgCity from '../../assets/bgBody.png';
 
@@ -81,7 +83,25 @@ export const Limitation = styled.div`
     a:hover{
       color:#ff5100;
     }
+    @media (max-width: 870px){
+      display:none;
+    }
   }
+`;
+
+export const ContentMenu = styled(FiMenu)`
+  @media (min-width: 871px){
+    display:none;
+  }
+`;
+
+export const SubMenu = styled(animated.div)`
+  position: relative;
+  padding: 16px 30px 16px 16px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+
+  display: flex;
 `;
 
 export const MenuBar = styled.ul`
@@ -122,4 +142,7 @@ export const MenuBar = styled.ul`
     transition: color 0.4s;
   }
 
+  @media (max-width: 870px){
+    display:none;
+  }
 `;

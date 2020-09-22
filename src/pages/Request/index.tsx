@@ -7,6 +7,7 @@ import getValidadionErrors from '../../utils/getValidationErros';
 import api from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
+import { jsPDF } from 'jspdf';
 
 import Select from '../../components/Select';
 import Menu from '../../components/Menu';
@@ -19,7 +20,6 @@ import { Container, Wrapper, Wrapper2, ContentForm, ColumnLeft, ColumnRight, Sec
 
 interface PriceNeighborhood{
   destination: string;
-  send: string;
   price: number;
 }
 interface FormData{
@@ -156,16 +156,16 @@ const Request: React.FC = () => {
 
   useEffect(() => {
     setIsLocation([
-      { send: 'Alecrim', destination: 'Alecrim', price: 5 },
-      { send: 'Alecrim', destination: 'Areia Preta', price: 10 },
-      { send: 'Alecrim', destination: 'Barro Vermelho', price: 10 },
-      { send: 'Alecrim', destination: 'Bom Pastor', price: 10 },
-      { send: 'Alecrim', destination: 'Candelária', price: 10 },
-      { send: 'Alecrim', destination: 'Capim Macio', price: 15 },
-      { send: 'Alecrim', destination: 'Cidade Alta', price: 10 },
-      { send: 'Alecrim', destination: 'Cidade da Esperança', price: 10 },
-      { send: 'Alecrim', destination: 'Cidade Nova', price: 10 },
-      { send: 'Alecrim', destination: 'Dix-Sept Rosado', price: 10 },
+      { destination: 'Areia Preta', price: 10 },
+      { destination: 'Barro Vermelho', price: 10 },
+      { destination: 'Bom Pastor', price: 10 },
+      { destination: 'Candelária', price: 10 },
+      { destination: 'Alecrim', price: 5 },
+      { destination: 'Capim Macio', price: 15 },
+      { destination: 'Cidade Alta', price: 10 },
+      { destination: 'Cidade da Esperança', price: 10 },
+      { destination: 'Cidade Nova', price: 10 },
+      { destination: 'Dix-Sept Rosado', price: 10 },
     ]);
   }, []);
 
@@ -174,15 +174,14 @@ const Request: React.FC = () => {
     { value: 'cashIn', label: 'Dinheiro na retirada' },
     { value: 'cashOut', label: 'Dinheiro na entrega' },
     { value: 'machineCard', label: 'Cartão de crédito/débito' },
-    { value: 'voucher', label: 'Crédito online' },
     { value: 'transferBanking', label: 'Transferência bancária' }
   ]
 
-  const SenderNeighborhoodCalc = useCallback(() => {
-    const send = formRef.current?.getFieldValue('sender_neighborhood');
-    setIsSend(send)
-    return send;
-  }, []);
+ // const SenderNeighborhoodCalc = useCallback(() => {
+  //   const send = formRef.current?.getFieldValue('sender_neighborhood');
+  //   setIsSend(send)
+  //   return send;
+  // }, []);
 
   const RecipientNeighborhoodCalc = useCallback(() => {
     const destination = formRef.current?.getFieldValue('recipient_neighborhood');
@@ -190,24 +189,22 @@ const Request: React.FC = () => {
     return destination;
   }, []);
 
-  const FilterPrice = useCallback((send, destination) => {
-    SenderNeighborhoodCalc();
+  const FilterPrice = useCallback(( destination) => {
+    // SenderNeighborhoodCalc();
     RecipientNeighborhoodCalc();
 
-    console.log(send, destination);
+    const recipientLocation = isLocation.filter(recipientlocation => recipientlocation.destination === destination);
 
-    const senderLocation = isLocation.filter(senderlocation => senderlocation.send === send);
-
-    const recipientLocation = senderLocation.filter(recipientlocation => recipientlocation.destination === destination);
+    // const recipientLocation = senderLocation.filter(recipientlocation => recipientlocation.destination === destination);
 
     return recipientLocation;
 
 
-  },[isLocation, SenderNeighborhoodCalc, RecipientNeighborhoodCalc ]);
+  },[isLocation, RecipientNeighborhoodCalc ]);
 
   useEffect(() => {
 
-    const Pap = FilterPrice(isSend, isDestination);
+    const Pap = FilterPrice( isDestination);
 
     const price = Pap[0];
 
@@ -215,7 +212,7 @@ const Request: React.FC = () => {
       setIsPrice(price)
     };
 
-  },[FilterPrice, isSend, isDestination ]);
+  },[FilterPrice, isDestination ]);
 
   // const checkBalance = useCallback(({ payment }) => {
   //   const paymentMethod = payment;
@@ -349,7 +346,7 @@ const Request: React.FC = () => {
                 <Input type="text" name="sender_complement" placeholder="Complemento" id="recipient_complement"/>
                 <Input type="text" name="sender_city" placeholder="Cidade" id="sender_city"/>
 
-                <Select onBlur= {SenderNeighborhoodCalc} name="sender_neighborhood" id="sender_neighborhood" options={options} />
+                <Select name="sender_neighborhood" id="sender_neighborhood" options={options} />
 
                 <Input type="tel" name="sender_cel" placeholder="Telefone/Whatsapp" id="sender_cel"/>
 

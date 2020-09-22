@@ -43,7 +43,7 @@ export const Limitation = styled.div`
     max-width: 420px;
     border-radius: 6px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    filter: blur(6px);
+
   }
 `;
 
@@ -51,12 +51,21 @@ export const RightBox = styled.div`
   max-width: 400px;
   flex-direction: column;
   padding-top: 30px;
+  font-weight: 300;
 `;
 
 export const LeftBox = styled.div`
   max-width: 400px;
   flex-direction: column;
   padding-bottom: 30px;
+  font-weight: 300;
 
   h1{ text-align: right}
+
+  strong{
+    font-family: Ubuntu;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: right;
+  }
 `;

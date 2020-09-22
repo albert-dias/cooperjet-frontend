@@ -4,6 +4,25 @@ import banner from '../../assets/banner.png';
 import bgHomeSup from '../../assets/1.png';
 import bgHomeInf from '../../assets/2.png';
 
+export const Campanha = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-height: 450px;
+  height: 100%;
+  background:#EEEEEE;
+  background-size: cover;`;
+
+export const CLimitation = styled.div`
+  max-width: 960px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  padding: 80px 10px 170px;
+`;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;

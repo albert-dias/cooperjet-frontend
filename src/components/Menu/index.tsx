@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Limitation, MenuBar } from './styles';
+import { Container, Limitation, MenuBar, ContentMenu } from './styles';
 import logo from '../../assets/logoAlterada.png'
 import { useAuth } from '../../hooks/auth';
 import { FiPower } from 'react-icons/fi';
@@ -13,6 +13,7 @@ const Menu: React.FC = () => {
     <Container>
       <Limitation>
         <Link to="/"><img src={logo} alt="Cooperjet" width="100%" /></Link>
+        <ContentMenu color="#ff5100" size={30} />
         <MenuBar>
           <li>
             <Link to="/">Home</Link>

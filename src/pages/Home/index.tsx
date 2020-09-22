@@ -13,6 +13,8 @@ import {  Container,
           Pillars,
           PillarCard,
           Transition,
+          Campanha,
+          CLimitation,
         } from './styles';
 
 import Menu from '../../components/Menu';
@@ -63,6 +65,12 @@ const Home: React.FC = () => {
   return(
     <>
       <Menu />
+      {/* <Campanha>
+        <CLimitation>
+          <h1>Ganhe dinheiro fazendo entregas</h1>
+          <span>Aceitou, entregou, ganhou!</span>
+        </CLimitation>
+      </Campanha> */}
       <Container>
         <Limitation>
           <h1>AGILIDADE</h1>

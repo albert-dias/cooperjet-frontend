@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                     <path id="Caminho_42" data-name="Caminho 42" d="M19.733,30.323a3.2,3.2,0,0,1-1.388,0,13.664,13.664,0,0,1-7.366-5.337A9.074,9.074,0,0,1,9.058,21.57a4.056,4.056,0,0,1,1.281-3.736,2.135,2.135,0,0,1,1.815,0h0a21.35,21.35,0,0,0,1.174,2.775,1.388,1.388,0,0,1,0,.64,4.164,4.164,0,0,1-.854,1.067v.747a8.967,8.967,0,0,0,4.59,4.056.641.641,0,0,0,.747,0l.961-1.281h.747l2.028.854h0c.64,0,.64,0,.64,1.067s-1.174,2.135-2.455,2.562Z" transform="translate(144.446 3234.56)" fill="#fff" fill-rule="evenodd"/>
                   </g>
                 </svg>
-                <p>(84)99999-9999</p>
+                <p>(84)98880-6878 / 2010-6394</p>
               </a>
             </Social>
             <Social>
@@ -61,12 +61,12 @@ const Footer: React.FC = () => {
             </Social>
           </Socials>
           <Localization>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.8991528009747!2d-35.2054894852326!3d-5.8697986957472255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2ffba2f713a97%3A0x88e376b475d0c670!2sCooperjet%20Entregas%20Inteligentes!5e0!3m2!1spt-BR!2sbr!4v1597443484177!5m2!1spt-BR!2sbr"
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.751626075929!2d-35.19770378590387!3d-5.890478095732441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b2f8bf29b8980f%3A0x19912d09de2ff6f5!2sR.%20Peroba%2C%2055%20-%20Nova%20Parnamirim%2C%20Parnamirim%20-%20RN%2C%2059152-050!5e0!3m2!1spt-BR!2sbr!4v1600398061205!5m2!1spt-BR!2sbr"
               width="100%"
               height="50%"
               title="Endereço base">
             </iframe>
-            <p>R. Divinópolis, 4891 - loja 03, Neópolis, Natal - RN</p>
+            <p><strong>Matriz: </strong>R. Peroba, 55A, Nova Parnamirim, Natal - RN </p>
           </Localization>
         </Limitation>
       </Container>

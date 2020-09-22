@@ -70,6 +70,7 @@ export const GridContainer = styled.div`
 export const Todos = styled.div`
   background:#fff;
   border-radius: 4px;
+  overflow: scroll;
   flex: 1;
   max-width: 450px;
   min-width: 400px;
