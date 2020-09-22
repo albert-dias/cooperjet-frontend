@@ -107,8 +107,8 @@ const Dashboard: React.FC = () => {
             <h2 className="Pending">Em aberto</h2>
             <Todos>
               { isAppointments.map(appointment => {
-                if(appointment.status === 'open'){
-                  return (
+                return (
+                  appointment.status === 'open' &&
                   <Todo key={appointment.id}>
                       <Row>
                         <Cel>
@@ -195,7 +195,7 @@ const Dashboard: React.FC = () => {
                         <button className="Confirm" type='submit' onClick={() => handleSubmit(appointment.id)}>CONFIRMAR</button>
                       </Row>
                     </Todo>
-                  )}
+                  )
                 })
               }
             </Todos>
@@ -204,8 +204,8 @@ const Dashboard: React.FC = () => {
             <h2 className="Progress">Em andamento</h2>
             <Todos>
               { isAppointments.map(appointment => {
-                if(appointment.status === 'ongoing'){
                   return (
+                    appointment.status === 'ongoing' &&
                     <Todo key={appointment.id}>
                       <Row>
                         <Cel>
@@ -220,7 +220,7 @@ const Dashboard: React.FC = () => {
                         <button className="Confirm" type='submit'>CONFIRMAR</button>
                       </Row>
                     </Todo>
-                  )};
+                  );
                 })
               }
             </Todos>
@@ -229,8 +229,8 @@ const Dashboard: React.FC = () => {
             <h2 className="Success">Finalizados</h2>
             <Todos>
             { isAppointments.map(appointment => {
-                if(appointment.status === 'completed'){
                   return (
+                    appointment.status === 'completed' &&
                     <Todo key={appointment.id}>
                       <Row>
                         <Cel>
@@ -244,7 +244,7 @@ const Dashboard: React.FC = () => {
                         <p><strong>Cliente: </strong>{appointment.sender_name}</p>
                       </Row>
                     </Todo>
-                  )};
+                  );
                 })
               }
             </Todos>
@@ -253,8 +253,8 @@ const Dashboard: React.FC = () => {
             <h2 className="Canceled">Cancelados</h2>
             <Todos>
             { isAppointments.map(appointment => {
-                if(appointment.status === 'canceled'){
                   return (
+                    appointment.status === 'canceled' &&
                     <Todo key={appointment.id}>
                       <Row>
                         <Cel>
@@ -265,7 +265,7 @@ const Dashboard: React.FC = () => {
                         <p><strong>Cliente: </strong>{appointment.sender_name}</p>
                       </Row>
                     </Todo>
-                  )};
+                  );
                 })
               }
             </Todos>
