@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { jsPDF } from 'jspdf';
+import { useAuth } from '../../hooks/auth';
 
 import MenuDashboard from '../../components/MenuDashboard';
 import Footer from '../../components/Footer';
@@ -35,24 +36,37 @@ interface RequestData{
 }
 
 const Dashboard: React.FC = () => {
+  const { token } = useAuth();
   const [isAppointments, setIsAppointments] = useState<RequestData[]>([]);
+  const [isReload, setIsReload] = useState(false);
 
   useEffect(() =>{
     async function loadData(){
       const response = await api.get('/appointments');
 
-      setIsAppointments(response.data)
+      setIsAppointments(response.data);
+
+      setIsReload(false);
     }
 
     loadData();
-  },[]);
+  },[isReload]);
 
 
 
-  const handleSubmit = useCallback((id: string) => {
+  const handleSubmitOngoing = useCallback( async (id: string) => {
     const appointmentDoc = isAppointments.filter((appointment) => {
       return appointment.id === id;
     });
+
+    const response = await api.put('appointments', {
+      id,
+      status: 'ongoing',
+    }, {
+      headers: {'authorization': `Bearer ${token}`}
+    });
+
+    console.log(response.data);
 
     const doc = new jsPDF();
     doc.rect(0, 0, 500, 30, "F");
@@ -93,9 +107,30 @@ const Dashboard: React.FC = () => {
     appointmentDoc[0].recipient_note && doc.text(`Observação: ${appointmentDoc[0].recipient_note}`, 10, 170);
 
     doc.save(`${appointmentDoc[0].number}.pdf`);
+    setIsReload(true);
+  },[isAppointments, token])
 
+  const handleSubmitCanceled = useCallback( async (id: string) => {
+   await api.put('appointments', {
+      id,
+      status: 'canceled',
+    }, {
+      headers: {'authorization': `Bearer ${token}`}
+    });
 
-  },[isAppointments])
+    setIsReload(true);
+  },[token]);
+
+  const handleSubmitCompleted = useCallback( async (id: string) => {
+    await api.put('appointments', {
+      id,
+      status: 'completed',
+    }, {
+      headers: {'authorization': `Bearer ${token}`}
+    });
+
+    setIsReload(true);
+  },[token]);
 
   return (
     <>
@@ -191,8 +226,8 @@ const Dashboard: React.FC = () => {
                         <p><strong>OBS: </strong>{appointment.recipient_note}</p>
                       </Row>
                       <Row className="Buttoms">
-                        <button className="Cancel" type='submit'>CANCELAR</button>
-                        <button className="Confirm" type='submit' onClick={() => handleSubmit(appointment.id)}>CONFIRMAR</button>
+                        <button className="Cancel" type='submit' onClick={() => handleSubmitCanceled(appointment.id)}>CANCELAR</button>
+                        <button className="Confirm" type='submit' onClick={() => handleSubmitOngoing(appointment.id)}>CONFIRMAR</button>
                       </Row>
                     </Todo>
                   )
@@ -216,8 +251,8 @@ const Dashboard: React.FC = () => {
                         <p><strong>Cliente: </strong>{appointment.sender_name}</p>
                       </Row>
                       <Row className="Buttoms">
-                        <button className="Cancel" type='submit'>CANCELAR</button>
-                        <button className="Confirm" type='submit'>CONFIRMAR</button>
+                        <button className="Cancel" type='submit' onClick={() => handleSubmitCanceled(appointment.id)} >CANCELAR</button>
+                        <button className="Confirm" type='submit' onClick={() => handleSubmitCompleted(appointment.id)}>CONFIRMAR</button>
                       </Row>
                     </Todo>
                   );

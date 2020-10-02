@@ -20,7 +20,7 @@ import ImgMotoboy from '../../assets/motoboyReq.png';
 import { Container, Wrapper, Wrapper2, ContentForm, ColumnLeft, ColumnRight, Section } from './styles';
 
 interface PriceNeighborhood{
-  destination: string;
+  to: string;
   price: number;
 }
 interface FormData{
@@ -72,104 +72,20 @@ const Request: React.FC = () => {
   const { user, token } = useAuth();
   const { addToast } = useToast();
 
-  const options = [
-    { value: 'Alecrim', label: 'Alecrim' },
-    { value: 'Areia Preta', label: 'Areia Preta' },
-    { value: 'Barro Vermelho', label: 'Barro Vermelho' },
-    { value: 'Bom Pastor', label: 'Bom Pastor' },
-    { value: 'Candelária', label: 'Candelária' },
-    { value: 'Capim Macio', label: 'Capim Macio' },
-    { value: 'Cidade Alta', label: 'Cidade Alta' },
-    { value: 'Cidade da Esperança', label: 'Cidade da Esperança' },
-    { value: 'Cidade Nova', label: 'Cidade Nova' },
-    { value: 'Dix-Sept Rosado', label: 'Dix-Sept Rosado' },
-    { value: 'Felipe Camarão', label: 'Felipe Camarão' },
-    { value: 'Guarapes', label: 'Guarapes' },
-    { value: 'Igapó', label: 'Igapó' },
-    { value: 'Lagoa Azul', label: 'Lagoa Azul' },
-    { value: 'Lagoa Nova', label: 'Lagoa Nova' },
-    { value: 'Lagoa Seca', label: 'Lagoa Seca' },
-    { value: 'Mãe Luíza', label: 'Mãe Luíza' },
-    { value: 'Neópolis', label: 'Neópolis' },
-    { value: 'Nordeste', label: 'Nordeste' },
-    { value: 'Nossa Senhora da Apresentação', label: 'Nossa Senhora da Apresentação' },
-    { value: 'Nossa Senhora de Nazaré', label: 'Nossa Senhora de Nazaré' },
-    { value: 'Nova Descoberta', label: 'Nova Descoberta' },
-    { value: 'Pajuçara', label: 'Pajuçara' },
-    { value: 'Petrópolis', label: 'Petrópolis' },
-    { value: 'Pitimbu', label: 'Pitimbu' },
-    { value: 'Planalto', label: 'Planalto' },
-    { value: 'Ponta Negra', label: 'Ponta Negra' },
-    { value: 'Potengi', label: 'Potengi' },
-    { value: 'Praia do Meio', label: 'Praia do Meio' },
-    { value: 'Quintas', label: 'Quintas' },
-    { value: 'Redinha', label: 'Redinha' },
-    { value: 'Ribeira', label: 'Ribeira' },
-    { value: 'Rocas', label: 'Rocas' },
-    { value: 'Salinas', label: 'Salinas' },
-    { value: 'Santos Reis', label: 'Santos Reis' },
-    { value: 'Tirol', label: 'Tirol' },
-    { value: 'Água Vermelha', label: 'Água Vermelha' },
-    { value: 'Antônio Fernandes', label: 'Antônio Fernandes' },
-    { value: 'Bela Parnamirim', label: 'Bela Parnamirim' },
-    { value: 'Boa Esperança', label: 'Boa Esperança' },
-    { value: 'Cajupiranga', label: 'Cajupiranga' },
-    { value: 'Centro', label: 'Centro' },
-    { value: 'Cohabinal', label: 'Cohabinal' },
-    { value: 'Cotovelo', label: 'Cotovelo' },
-    { value: 'Cotovelo - Distrito Litoral', label: 'Cotovelo - Distrito Litoral' },
-    { value: 'Distrito Industrial', label: 'Distrito Industrial' },
-    { value: 'Eduardo Gomes', label: 'Eduardo Gomes' },
-    { value: 'Emaús', label: 'Emaús' },
-    { value: 'Jardim América', label: 'Jardim América' },
-    { value: 'Jardim Cohabinal', label: 'Jardim Cohabinal' },
-    { value: 'Jardim Planalto', label: 'Jardim Planalto' },
-    { value: 'Jockey', label: 'Jockey' },
-    { value: 'Liberdade', label: 'Liberdade' },
-    { value: 'Loteamento Taborda', label: 'Loteamento Taborda' },
-    { value: 'Marília', label: 'Marília' },
-    { value: 'Marina', label: 'Marina' },
-    { value: 'Monte Castelo', label: 'Monte Castelo' },
-    { value: 'Nova Esperança', label: 'Nova Esperança' },
-    { value: 'Nova Parnamirim', label: 'Nova Parnamirim' },
-    { value: 'Parnamirim', label: 'Parnamirim' },
-    { value: 'Parque das Árvores', label: 'Parque das Árvores' },
-    { value: 'Parque das Nações', label: 'Parque das Nações' },
-    { value: 'Parque de Exposições', label: 'Parque de Exposições' },
-    { value: 'Parque do Jiqui', label: 'Parque do Jiqui' },
-    { value: 'Parque do Pitimbu', label: 'Parque do Pitimbu' },
-    { value: 'Parque Exposições', label: 'Parque Exposições' },
-    { value: 'Parque Industrial', label: 'Parque Industrial' },
-    { value: 'Parque Nações', label: 'Parque Nações' },
-    { value: 'Passagem de Areia', label: 'Passagem de Areia' },
-    { value: 'Pirangi Dentro', label: 'Pirangi Dentro' },
-    { value: 'Pirangi do Norte', label: 'Pirangi do Norte' },
-    { value: 'Pirangi do Sul', label: 'Pirangi do Sul' },
-    { value: 'Pium', label: 'Pium' },
-    { value: 'Primavera', label: 'Primavera' },
-    { value: 'Rosa dos Ventos', label: 'Rosa dos Ventos' },
-    { value: 'Santa Tereza', label: 'Santa Tereza' },
-    { value: 'Santos Reis', label: 'Santos Reis' },
-    { value: 'Vale do Sol', label: 'Vale do Sol' },
-    { value: 'Vida Nova', label: 'Vida Nova' },
-    { value: 'Vila Sol', label: 'Vila Sol' }
-  ]
-
   useEffect(() => {
-    setIsLocation([
-      { destination: 'Areia Preta', price: 10 },
-      { destination: 'Barro Vermelho', price: 10 },
-      { destination: 'Bom Pastor', price: 10 },
-      { destination: 'Candelária', price: 10 },
-      { destination: 'Alecrim', price: 5 },
-      { destination: 'Capim Macio', price: 15 },
-      { destination: 'Cidade Alta', price: 10 },
-      { destination: 'Cidade da Esperança', price: 10 },
-      { destination: 'Cidade Nova', price: 10 },
-      { destination: 'Dix-Sept Rosado', price: 10 },
-    ]);
+    async function loadData(){
+      const response = await api.get('/cpanel/prices');
+
+      setIsLocation(response.data);
+    }
+
+    loadData();
   }, []);
 
+  const options =
+    isLocation.map(local =>(
+      {key:local.to, value: local.to, label: local.to }
+    ))
 
   const payment_options = [
     { value: 'cashIn', label: 'Dinheiro na retirada' },
@@ -190,11 +106,11 @@ const Request: React.FC = () => {
     return destination;
   }, []);
 
-  const FilterPrice = useCallback(( destination) => {
+  const FilterPrice = useCallback((destination) => {
     // SenderNeighborhoodCalc();
     RecipientNeighborhoodCalc();
 
-    const recipientLocation = isLocation.filter(recipientlocation => recipientlocation.destination === destination);
+    const recipientLocation = isLocation.filter(recipientlocation => recipientlocation.to === destination);
 
     // const recipientLocation = senderLocation.filter(recipientlocation => recipientlocation.destination === destination);
 
@@ -205,7 +121,7 @@ const Request: React.FC = () => {
 
   useEffect(() => {
 
-    const Pap = FilterPrice( isDestination);
+    const Pap = FilterPrice(isDestination);
 
     const price = Pap[0];
 
@@ -345,6 +261,8 @@ const Request: React.FC = () => {
       doc.text(`Cidade: ${appointment.recipient_city}`, 110, 160);
 
       appointment.recipient_note && doc.text(`Observação: ${appointment.recipient_note}`, 10, 170);
+
+      doc.text(`Agradecemos por sua preferencia sr(a) ${appointment.sender_name}`, 10, 180);
 
       doc.save(`${appointment.number}.pdf`);
 
