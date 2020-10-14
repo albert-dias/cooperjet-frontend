@@ -29,7 +29,6 @@ export const Wrap = styled.div`
   }
 
   button {
-
     height: 40px;
     padding: 10px;
     border-radius: 6px;

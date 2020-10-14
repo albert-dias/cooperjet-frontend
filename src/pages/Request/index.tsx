@@ -8,7 +8,8 @@ import api from '../../services/api';
 import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
 import { jsPDF } from 'jspdf';
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo.png';
+import io from 'socket.io-client';
 
 import Select from '../../components/Select';
 import Menu from '../../components/Menu';
@@ -273,6 +274,10 @@ const Request: React.FC = () => {
         title: 'Solicitação enviada',
         description: 'Obrigado por utilizar nosso serviço!',
       });
+
+      const socket = io('http://localhost:3333');
+
+      socket.emit('form', appointment);
 
     } catch (err){
       if(err instanceof Yup.ValidationError){

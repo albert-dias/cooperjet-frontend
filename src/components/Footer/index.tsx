@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
           <Socials>
             <h3>Redes Sociais</h3>
             <Social>
-              <a href="https://cooperjet.com.br">
+              <a href="https://api.whatsapp.com/send?phone=5584988806878">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                   <g id="Grupo_18" data-name="Grupo 18" transform="translate(-140 -3238.583)">
                     <path id="Caminho_40" className="BG" data-name="Bg" d="M47.52,36.034a20,20,0,1,1-20-19.9,20,20,0,0,1,20,19.9Z" transform="translate(132.48 3222.453)" fill="#494d56"/>

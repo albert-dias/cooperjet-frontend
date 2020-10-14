@@ -6,7 +6,8 @@ import MenuDashboard from '../../components/MenuDashboard';
 import Footer from '../../components/Footer';
 import Logo from '../../assets/logo.png'
 
-import api from '../../services/api'
+import api from '../../services/api';
+import io from 'socket.io-client';
 
 import { Container, Limitation, GridContainer, Todos, Todo, Row, Cel } from './styles';
 
@@ -40,17 +41,27 @@ const Dashboard: React.FC = () => {
   const [isAppointments, setIsAppointments] = useState<RequestData[]>([]);
   const [isReload, setIsReload] = useState(false);
 
+  const socket = io('http://localhost:3333');
+
+  socket.on('form', (t: RequestData) => {
+      setIsAppointments([t, ...isAppointments]);
+  });
+
   useEffect(() =>{
     async function loadData(){
-      const response = await api.get('/appointments');
+      const response = await api.get('/appointments', {
+        headers: {'authorization': `Bearer ${token}`}
+      });
+
 
       setIsAppointments(response.data);
 
       setIsReload(false);
+
     }
 
     loadData();
-  },[isReload]);
+  },[isReload, token ]);
 
 
 
