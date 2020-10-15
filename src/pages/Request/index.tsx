@@ -275,7 +275,7 @@ const Request: React.FC = () => {
         description: 'Obrigado por utilizar nosso serviço!',
       });
 
-      const socket = io('http://localhost:3333');
+      const socket = io('https://api.cooperjet.com.br');
 
       socket.emit('form', appointment);
 

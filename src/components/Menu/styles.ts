@@ -1,8 +1,11 @@
 import { FiMenu } from 'react-icons/fi';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { animated } from 'react-spring';
 
 //import bgCity from '../../assets/bgBody.png';
+interface ContainerProps {
+  isMenu: boolean;
+}
 
 export const Container = styled.div`
   display: flex;
@@ -92,6 +95,7 @@ export const Limitation = styled.div`
 export const ContentMenu = styled(FiMenu)`
   @media (min-width: 871px){
     display:none;
+    cursor: pointer;
   }
 `;
 
@@ -145,4 +149,37 @@ export const MenuBar = styled.ul`
   @media (max-width: 870px){
     display:none;
   }
+`;
+
+export const DropBar = styled.ul<ContainerProps>`
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  top: -150px;
+
+  li{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    transition: transform 0.4s;
+
+    a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Ubuntu;
+    transition: color 0.4s;
+    }
+
+  }
+
+  ${(props) =>
+    props.isMenu&&
+    css`
+      top: 50px;
+  `}
+
 `;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Limitation, MenuBar, ContentMenu } from './styles';
+import { Container, Limitation, MenuBar, ContentMenu, DropBar } from './styles';
 import logo from '../../assets/logoAlterada.png'
 import { useAuth } from '../../hooks/auth';
 import { FiPower } from 'react-icons/fi';
@@ -8,12 +8,19 @@ import Avatar from '../../assets/teste.svg';
 
 const Menu: React.FC = () => {
   const { user, signOut, signed } = useAuth();
+  const [ isMenu, setIsMenu ] = useState(false);
+
+  const handleMenu = useCallback(() => {
+
+    return ( !isMenu ) ? setIsMenu(true) : setIsMenu(false);
+
+  }, [isMenu])
 
   return(
     <Container>
       <Limitation>
         <Link to="/"><img src={logo} alt="Cooperjet" width="100%" /></Link>
-        <ContentMenu color="#ff5100" size={30} />
+        <ContentMenu color="#ff5100" size={30} onClick={handleMenu}/>
         <MenuBar>
           <li>
             <Link to="/">Home</Link>
@@ -51,6 +58,21 @@ const Menu: React.FC = () => {
             </>
           )}
         </div>
+
+        <DropBar isMenu={isMenu}>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/sobre">Quem somos</Link>
+          </li>
+          <li>
+            <Link to="/contato">Contato</Link>
+          </li>
+          <li className="ButtomRequest">
+            <Link to="/solicitar">CHAME JÁ!</Link>
+          </li>
+        </DropBar>
       </Limitation>
     </Container>
   )

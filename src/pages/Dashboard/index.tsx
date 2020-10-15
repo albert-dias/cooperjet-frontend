@@ -41,7 +41,7 @@ const Dashboard: React.FC = () => {
   const [isAppointments, setIsAppointments] = useState<RequestData[]>([]);
   const [isReload, setIsReload] = useState(false);
 
-  const socket = io('http://localhost:3333');
+  const socket = io('https://api.cooperjet.com.br');
 
   socket.on('form', (t: RequestData) => {
       setIsAppointments([t, ...isAppointments]);
