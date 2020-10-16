@@ -24,6 +24,10 @@ export const Limitation = styled.div`
   align-items: center;
   padding: 30px 10px;
 
+  @media (max-width: 870px){
+    overflow: hidden;
+  }
+
   img{
     flex: 1;
     max-width: 250px;
@@ -87,6 +91,61 @@ export const Limitation = styled.div`
       color:#ff5100;
     }
     @media (max-width: 870px){
+      display:none;
+    }
+  }
+
+  .LoginMob{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div{
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: right;
+      justify-content: center;
+      margin-right: 10px;
+
+      p{
+        color: #fff;
+        font-family: Ubuntu;
+        text-align: right;
+      }
+
+      span{
+        color: #fff;
+        font-family: Ubuntu;
+        font-size: 10px;
+        margin-top: 5px;
+        text-align: right;
+      }
+    }
+
+    button{
+      background: transparent;
+      border: none;
+      margin-right: 10px;
+    }
+
+    a{
+      color: #fff;
+      font-family: Ubuntu;
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: color 0.4s;
+      font-size: 12px;
+    }
+
+    a:last-child{
+      border-left: 1px solid #fff;
+    }
+
+    a:hover{
+      color:#ff5100;
+    }
+    @media (min-width: 870px){
       display:none;
     }
   }
@@ -163,7 +222,7 @@ export const DropBar = styled.ul<ContainerProps>`
   color: #fff;
   position: absolute;
   padding: 6px;
-  right: -150px;
+  right: -350px;
   top: 16vh;
   background-color: #000;
   transition: right 0.3s;

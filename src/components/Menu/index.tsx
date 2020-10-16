@@ -75,15 +75,25 @@ const Menu: React.FC = () => {
             <Link to="/solicitar">CHAME JÁ!</Link>
           </li>
           <li>
-            <Link to="/login">Entrar</Link>
-          </li>
-          <li>
-              <Link to="/cadastro">Cadastrar</Link>
-          </li>
-          <li>
-            <button onClick={signOut} type='button'>
-              Sair <FiPower color="#ff5100" size={20}/>
-            </button>
+            <div className="LoginMob" >
+              {signed && (
+              <>
+                <div>
+                  <p>{user.name}</p>
+                  {/* <span>{(user.balance === null ) ? 'R$ 0,00' : `R$ ${user.balance},00`}</span> */}
+                </div>
+                <button onClick={signOut} type='button'>
+                  <FiPower color="#ff5100" size={20}/>
+                </button>
+              </>
+              )}
+              {!signed && (
+                <>
+                  <Link to="/login">Entrar</Link>
+                  <Link to="/cadastro">Cadastrar</Link>
+                </>
+              )}
+            </div>
           </li>
         </DropBar>
       </Limitation>
