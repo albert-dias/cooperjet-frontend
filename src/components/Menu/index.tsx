@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Limitation, MenuBar, ContentMenu, DropBar } from './styles';
 import logo from '../../assets/logoAlterada.png'
@@ -11,16 +11,18 @@ const Menu: React.FC = () => {
   const [ isMenu, setIsMenu ] = useState(false);
 
   const handleMenu = useCallback(() => {
+    console.log(isMenu)
 
     return ( !isMenu ) ? setIsMenu(true) : setIsMenu(false);
 
-  }, [isMenu])
+  }, [isMenu]);
+
 
   return(
     <Container>
       <Limitation>
         <Link to="/"><img src={logo} alt="Cooperjet" width="100%" /></Link>
-        <ContentMenu color="#ff5100" size={30} onClick={handleMenu}/>
+        <ContentMenu color="#ff5100" size={40} onClick={handleMenu}/>
         <MenuBar>
           <li>
             <Link to="/">Home</Link>
@@ -71,6 +73,17 @@ const Menu: React.FC = () => {
           </li>
           <li className="ButtomRequest">
             <Link to="/solicitar">CHAME JÁ!</Link>
+          </li>
+          <li>
+            <Link to="/login">Entrar</Link>
+          </li>
+          <li>
+              <Link to="/cadastro">Cadastrar</Link>
+          </li>
+          <li>
+            <button onClick={signOut} type='button'>
+              Sair <FiPower color="#ff5100" size={20}/>
+            </button>
           </li>
         </DropBar>
       </Limitation>

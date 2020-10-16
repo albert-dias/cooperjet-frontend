@@ -93,9 +93,14 @@ export const Limitation = styled.div`
 `;
 
 export const ContentMenu = styled(FiMenu)`
+  cursor: pointer;
+  border: 1px solid #ff5500;
+  padding: 4px;
+  border-radius: 4px;
+
+
   @media (min-width: 871px){
     display:none;
-    cursor: pointer;
   }
 `;
 
@@ -157,14 +162,19 @@ export const DropBar = styled.ul<ContainerProps>`
   align-items: center;
   color: #fff;
   position: absolute;
-  right: 0;
-  top: -150px;
+  padding: 6px;
+  right: -150px;
+  top: 16vh;
+  background-color: #000;
+  transition: right 0.3s;
+  border-radius: 0 0 0 6px;
 
   li{
     display:block;
     justify-content: center;
     align-items: center;
-    padding: 8px 15px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #999999;
     transition: transform 0.4s;
 
     a{
@@ -176,10 +186,29 @@ export const DropBar = styled.ul<ContainerProps>`
 
   }
 
+  & li:last-child{
+    border: none;
+
+    button{
+      display:inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: Ubuntu;
+      background: transparent;
+      border: none;
+      font-size:12px;
+
+      svg{
+        margin-left: 5px;
+      }
+    }
+  }
+
   ${(props) =>
     props.isMenu&&
     css`
-      top: 50px;
+      right: 0;
   `}
 
 `;

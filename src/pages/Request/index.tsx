@@ -95,6 +95,11 @@ const Request: React.FC = () => {
     { value: 'transferBanking', label: 'Transferência bancária' }
   ]
 
+  const optionsCity = [
+    { value: 'Natal', label: 'Natal' },
+    { value: 'Parnamirim', label: 'Parnamirim' }
+  ]
+
  // const SenderNeighborhoodCalc = useCallback(() => {
   //   const send = formRef.current?.getFieldValue('sender_neighborhood');
   //   setIsSend(send)
@@ -309,9 +314,10 @@ const Request: React.FC = () => {
                 <Input type="text" name="sender_address" placeholder="Endereço de coleta"id="sender_address"/>
                 <Input type="text" name="sender_number" placeholder="Número"id="sender_number"/>
                 <Input type="text" name="sender_complement" placeholder="Complemento" id="recipient_complement"/>
-                <Input type="text" name="sender_city" placeholder="Cidade" id="sender_city"/>
 
-                <Select name="sender_neighborhood" id="sender_neighborhood" options={options} />
+                <Select placeholder="Cidade" name="sender_city" id="sender_city" options={optionsCity} />
+
+                <Select placeholder="Bairro" name="sender_neighborhood" id="sender_neighborhood" options={options} />
 
                 <Input type="tel" name="sender_cel" placeholder="Telefone/Whatsapp" id="sender_cel"/>
 
@@ -322,9 +328,10 @@ const Request: React.FC = () => {
                 <Input type="text" name="recipient_address" placeholder="Endereço de entrega?"id="recipient_address"/>
                 <Input type="text" name="recipient_number" placeholder="Número" id="sender_number"/>
                 <Input type="text" name="recipient_complement" placeholder="Complemento" id="recipient_complement"/>
-                <Input type="text" name="recipient_city" placeholder="Cidade" id="recipient_city"/>
 
-                <Select onBlur={RecipientNeighborhoodCalc} name="recipient_neighborhood" id="recipient_neighborhood" options={options} />
+                <Select placeholder="Cidade" name="recipient_city" id="recipient_city" options={optionsCity} />
+
+                <Select placeholder="Bairro" onBlur={RecipientNeighborhoodCalc} name="recipient_neighborhood" id="recipient_neighborhood" options={options} />
 
                 <Input type="tel" name="recipient_cel" placeholder="Telefone/ Whatsapp" id="recipient_cel"/>
 

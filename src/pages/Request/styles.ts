@@ -46,7 +46,7 @@ export const ContentForm = styled.div`
     font-size: 14px;
   }
 
-  #sender_neighborhood, #recipient_neighborhood, #payment{
+  #sender_neighborhood, #recipient_neighborhood, #payment, #sender_city, #recipient_city{
     border: 0;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 400px;
