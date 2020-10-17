@@ -24,10 +24,6 @@ export const Limitation = styled.div`
   align-items: center;
   padding: 30px 10px;
 
-  @media (max-width: 870px){
-    overflow: hidden;
-  }
-
   img{
     flex: 1;
     max-width: 250px;
@@ -222,10 +218,10 @@ export const DropBar = styled.ul<ContainerProps>`
   color: #fff;
   position: absolute;
   padding: 6px;
-  right: -350px;
-  top: 16vh;
+  right: 0;
+  top: -416vh;
   background-color: #000;
-  transition: right 0.3s;
+  transition: top 0.3s;
   border-radius: 0 0 0 6px;
 
   li{
@@ -267,7 +263,7 @@ export const DropBar = styled.ul<ContainerProps>`
   ${(props) =>
     props.isMenu&&
     css`
-      right: 0;
+      top: 16vh;
   `}
 
 `;
