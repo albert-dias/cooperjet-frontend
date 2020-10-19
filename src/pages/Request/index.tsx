@@ -176,7 +176,7 @@ const Request: React.FC = () => {
         sender_cel: Yup.string().required('Celular obrigatório'),
         sender_note: Yup.string(),
         recipient_name: Yup.string().required('Nome obrigatório'),
-        recipient_address: Yup.string().required('Endereçoo obrigatório'),
+        recipient_address: Yup.string().required('Endereço obrigatório'),
         recipient_number: Yup.string().required('Número obrigatório'),
         recipient_complement: Yup.string(),
         recipient_city: Yup.string().required('Cidade obrigatória'),
