@@ -42,7 +42,7 @@ const Menu: React.FC = () => {
           <>
             <div>
               <p>{user.name}</p>
-              <span>{(user.balance === null ) ? 'R$ 0,00' : `R$ ${user.balance},00`}</span>
+              {/* <span>{(user.balance === null ) ? 'R$ 0,00' : `R$ ${user.balance},00`}</span> */}
             </div>
             <button onClick={signOut} type='button'>
               <FiPower color="#ff5100" size={20}/>
