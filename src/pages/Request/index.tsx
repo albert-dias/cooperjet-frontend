@@ -280,6 +280,25 @@ const Request: React.FC = () => {
         description: 'Obrigado por utilizar nosso serviço!',
       });
 
+      formRef.current?.clearField('sender_name');
+      formRef.current?.clearField('sender_address');
+      formRef.current?.clearField('sender_number');
+      formRef.current?.clearField('sender_complement');
+      formRef.current?.clearField('sender_city');
+      formRef.current?.clearField('sender_neighborhood');
+      formRef.current?.clearField('sender_cel');
+      formRef.current?.clearField('sender_note');
+      formRef.current?.clearField('recipient_name');
+      formRef.current?.clearField('recipient_address');
+      formRef.current?.clearField('recipient_number');
+      formRef.current?.clearField('recipient_complement');
+      formRef.current?.clearField('recipient_city');
+      formRef.current?.clearField('recipient_neighborhood');
+      formRef.current?.clearField('recipient_cel');
+      formRef.current?.clearField('recipient_note');
+      formRef.current?.clearField('payment');
+
+
       const socket = io('https://api.cooperjet.com.br');
 
       socket.emit('form', appointment);
