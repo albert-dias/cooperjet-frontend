@@ -43,7 +43,7 @@ import natusCafe from '../../assets/clientes/natusCafe.png';
 
 
 const Home: React.FC = () => {
-  const[isUsers, setIsUsers] = useState();
+  const[isUsers, setIsUsers] = useState<number>();
   const[isQtdAppoitments, setIsQtdAppointments] = useState([]);
 
   useEffect(() => {
@@ -147,7 +147,7 @@ const Home: React.FC = () => {
       <Section>
         <Feedbacks>
           <Feedback>
-          <h2>{ isUsers }</h2>
+          <h2>{ isUsers && isUsers + 2}</h2>
             <strong>Clientes satisfeitos</strong>
             <p>usam nossos serviços com frequência</p>
           </Feedback>
@@ -157,7 +157,7 @@ const Home: React.FC = () => {
             <p>Todas finalizadas com sucesso!</p>
           </Feedback>
           <Feedback>
-            <h2>433</h2>
+            <h2>{ isUsers && isUsers + 3}</h2>
             <strong>Nos recomendam</strong>
             <p>melhorando a cada dia</p>
           </Feedback>
