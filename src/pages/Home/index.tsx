@@ -27,16 +27,16 @@ import steakHome from '../../assets/clientes/steakHome.png';
 import poize from '../../assets/clientes/poize.png';
 import pizzariaVitoria from '../../assets/clientes/pizzariaVitoria.png';
 import nanaGelateria from '../../assets/clientes/nanaGelateria.png';
-import mandok from '../../assets/clientes/mandok.png';
+import rafa from '../../assets/clientes/rafa.png';
 import mamaGourmet from '../../assets/clientes/mamaGourmet.png';
 import gillisBurguer from '../../assets/clientes/gillisBurguer.png';
 import fatiasPizzaria from '../../assets/clientes/fatiasPizzaria.png';
 import donBurger from '../../assets/clientes/donBurger.png';
 import curvaInBox from '../../assets/clientes/curvaInBox.png';
-import corazon from '../../assets/clientes/corazon.png';
+import pinPizza from '../../assets/clientes/pinPizza.png';
 import seuAcaiECia from '../../assets/clientes/seuAcaiECia.png';
 import saborDePao from '../../assets/clientes/saborDePao.png';
-import pandaPizza from '../../assets/clientes/pandaPizza.png';
+import mariaPitanga from '../../assets/clientes/mariaPitanga.png';
 import cafeBrigadeiro from '../../assets/clientes/cafeBrigadeiro.png';
 import natusCafe from '../../assets/clientes/natusCafe.png';
 
@@ -71,8 +71,8 @@ const Home: React.FC = () => {
       </Campanha> */}
       <Container>
         <Limitation>
-          <h1>AGILIDADE</h1>
-          <h3>Trabalho com rapidez, <br />responsabilidade e <br />principalmente qualidade!</h3>
+          <h1>Para sua empresa!</h1>
+          <h3>Entregas inteligentes de<br />uma forma rápida<br />e prática!</h3>
         </Limitation>
       </Container>
       <Companies>
@@ -106,7 +106,7 @@ const Home: React.FC = () => {
             <img src={nanaGelateria} alt="Nana Gelateria" width="100%" />
           </Card>
           <Card>
-            <img src={mandok} alt="Mandok" width="100%" />
+            <img src={rafa} alt="Pastelaria do Rafa" width="100%" />
           </Card>
           <Card>
             <img src={mamaGourmet} alt="Mama Gourmet" width="100%" />
@@ -127,13 +127,13 @@ const Home: React.FC = () => {
             <img src={seuAcaiECia} alt="Seu açai e cia" width="100%" />
           </Card>
           <Card>
-            <img src={corazon} alt="Corazon" width="100%" />
+            <img src={pinPizza} alt="Pin Pizzaria" width="100%" />
           </Card>
           <Card>
             <img src={saborDePao} alt="Padaria sabor de pão" width="100%" />
           </Card>
           <Card>
-            <img src={pandaPizza} alt="Panda Pizza" width="100%" />
+            <img src={mariaPitanga} alt="Maria Pitanga " width="100%" />
           </Card>
           <Card>
             <img src={natusCafe} alt="Natus Café" width="100%" />
