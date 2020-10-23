@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
         </Limitation>
       </Container>
       <Copyright>
-        <p>Copyright &copy; 2020 - All Rights Reserved - Cooperjet.com.br</p>
+        <p>Copyright &copy; 2018 - 2020 - All Rights Reserved - Cooperjet.com.br</p>
       </Copyright>
     </>
   )

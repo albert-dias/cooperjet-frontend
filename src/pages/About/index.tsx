@@ -17,7 +17,8 @@ const About: React.FC = () => {
           <RightBox>
             <h1>Nossa história</h1>
             <p>&nbsp;&nbsp;&nbsp;Uma empresa criada ao visar a necessidade de nossa cidade em entregas rápidas e de qualidade.</p>
-            <p>&nbsp;&nbsp;&nbsp;Buscando sempre a melhor forma para atender nossos clientes, desde a fundação prestando um trabalho de excelência, fundada no ano de 2014 inicialmente com 5 motoboy, hoje contamos com mais de 200 porfissionais. </p>
+            <p>&nbsp;&nbsp;&nbsp;Buscando sempre a melhor forma para atender nossos clientes, desde a fundação prestando um trabalho de excelência, fundada no ano de 2018 inicialmente com 2 motoboy, hoje contamos com mais de 200 porfissionais.</p>
+
           </RightBox>
         </Limitation>
         <Limitation>
