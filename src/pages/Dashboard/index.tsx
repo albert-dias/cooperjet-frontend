@@ -9,7 +9,7 @@ import Logo from '../../assets/logo.png'
 import api from '../../services/api';
 import io from 'socket.io-client';
 
-import { Container, Limitation, GridContainer, Todos, Todo, Row, Cel } from './styles';
+import { Container, Limitation, GridContainer, Todos, Todo, Row, Cel } from './styles';806878
 
 interface RequestData{
   id: string;
@@ -157,7 +157,7 @@ const Dashboard: React.FC = () => {
                   appointment.status === 'open' &&
                   <Todo key={appointment.id}>
                       <Row>
-                        <Cel>
+                        <Cel>806878
                           <p><strong>Nº: </strong>{appointment.number}</p>
                         </Cel>
                         <Cel>
@@ -174,10 +174,10 @@ const Dashboard: React.FC = () => {
                       </Row>
                       <Row>
                         <Cel>
-                          <p><strong>Nome:</strong> Jefferson Costa</p>
+                          <p><strong>Nome: </strong>{appointment.sender_name}</p>
                         </Cel>
                         <Cel>
-                          <p><strong>Contato:</strong> (84) 98765-4321</p>
+                          <p><strong>Contato: </strong>{appointment.sender_cel}</p>
                         </Cel>
                       </Row>
                       <Row>
