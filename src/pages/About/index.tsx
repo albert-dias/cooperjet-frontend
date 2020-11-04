@@ -16,8 +16,8 @@ const About: React.FC = () => {
         <img src={ImageE} alt="Imagem lado esquerdo" width="100%" />
           <RightBox>
             <h1>Nossa história</h1>
-            <p>&nbsp;&nbsp;&nbsp;Uma empresa criada ao visar a necessidade de nossa cidade em entregas rápidas e de qualidade.</p>
-            <p>&nbsp;&nbsp;&nbsp;Buscando sempre a melhor forma para atender nossos clientes, desde a fundação prestando um trabalho de excelência, fundada no ano de 2018 inicialmente com 2 motoboy, hoje contamos com mais de 200 porfissionais.</p>
+            <p>&nbsp;&nbsp;&nbsp;Uma empresa criada ao perceber a necessidade de nossa cidade no serviço de delivery com entregas rápidas e de qualidade.</p>
+            <p>&nbsp;&nbsp;&nbsp;Buscando sempre a melhor forma para atender nossos clientes, desde a fundação prestando um trabalho de excelência, fundada no ano de 2018 inicialmente com 2 motoboy, a Cooperjet hoje conta com mais de 200 profissionais capacitatos.</p>
 
           </RightBox>
         </Limitation>
@@ -25,8 +25,8 @@ const About: React.FC = () => {
           <LeftBox>
             <h1>Cooperjet</h1>
 
-            <p>&nbsp;&nbsp;&nbsp;Empresa especializada em coletas e entregas com urgência em Natal e região. Nossos Motoboys são capacitados e estão preparados para atender aos seus pedidos.</p>
-            <p>&nbsp;&nbsp;&nbsp;Cooperjet esta a mais de 4 anos no mercado de entregas rápidas atuando com coleta e entregas de documentos e pequenas encomendas, efetuando também compras, pagamentos, serviços cartorários, bancários e despachos aéreos. Nossa matriz esta instalada em Nova Parnamirim com filial e Parnamirim e brevemente em Macaíba, utilizamos software e aplicativos que nos permite monitorar em tempo real nossa equipe.
+            <p>&nbsp;&nbsp;&nbsp;ESomos uma empresa especializada em coletas e entregas com urgência em Natal e região. Nossos Motoboys são capacitados e estão preparados para atender aos seus pedidos.</p>
+            <p>&nbsp;&nbsp;&nbsp;Cooperjet esta a mais de 2 anos no mercado de entregas rápidas atuando com coleta e entregas de documentos e pequenas encomendas, efetuando também compras, pagamentos, serviços cartorários, bancários e despachos aéreos. Nossa matriz esta instalada em Nova Parnamirim com filial e Parnamirim e brevemente em Macaíba, utilizamos software e aplicativos que nos permite monitorar em tempo real nossa equipe.
               Atualmente atendemos com motoboy toda Natal e região, entregamos com moto até 250 km de Natal; </p>
             <p>&nbsp;&nbsp;&nbsp;Nossos Motoboy estão capacitados para atender sua necessidade no menor tempo possivel e com atendimento exclusivo.</p>
           </LeftBox>
