@@ -172,6 +172,7 @@ export const MenuBar = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+
   li{
     display:inline-flex;
     justify-content: center;
