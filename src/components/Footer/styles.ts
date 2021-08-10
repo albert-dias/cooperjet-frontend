@@ -73,6 +73,7 @@ export const Socials = styled.div`
     margin-bottom: 10px;
   }
 
+
   @media (max-width: 780px){
     min-width: 355px;
     width: 100%;
@@ -92,6 +93,10 @@ export const Social = styled.div`
     font-weight: 400;
     color: #fff;
     transition: color 0.4s;
+
+    .Fones{
+      font-size: 14px;
+    }
 
     svg{
       width:25px;
@@ -131,6 +136,7 @@ export const Localization = styled.div`
     font-size: 10px;
     margin-top: 5px;
   }
+
 
   @media (max-width: 780px){
     min-width: 355px;

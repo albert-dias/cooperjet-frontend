@@ -32,11 +32,11 @@ const Footer: React.FC = () => {
                     <path id="Caminho_42" data-name="Caminho 42" d="M19.733,30.323a3.2,3.2,0,0,1-1.388,0,13.664,13.664,0,0,1-7.366-5.337A9.074,9.074,0,0,1,9.058,21.57a4.056,4.056,0,0,1,1.281-3.736,2.135,2.135,0,0,1,1.815,0h0a21.35,21.35,0,0,0,1.174,2.775,1.388,1.388,0,0,1,0,.64,4.164,4.164,0,0,1-.854,1.067v.747a8.967,8.967,0,0,0,4.59,4.056.641.641,0,0,0,.747,0l.961-1.281h.747l2.028.854h0c.64,0,.64,0,.64,1.067s-1.174,2.135-2.455,2.562Z" transform="translate(144.446 3234.56)" fill="#fff" fill-rule="evenodd" />
                   </g>
                 </svg>
-                <p>(84)3645-7475 / 991499226</p>
+                <p className='Fones'>(84)3645-7475 / 2132-9517</p>
               </a>
             </Social>
             <Social>
-              <a href="https://www.instagram.com/cooperjet_express/">
+              <a href="https://www.instagram.com/cooperjet_oficial/">
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
                   <g id="Grupo_19" data-name="Grupo 19" transform="translate(-140 -3083.818)">
                     <g id="Grupo_16" data-name="Grupo 16" transform="translate(609.564 654)">
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                     </g>
                   </g>
                 </svg>
-                <p>@cooperjet_express</p>
+                <p>@cooperjet_oficial</p>
               </a>
             </Social>
             <Social>
