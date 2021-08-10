@@ -17,10 +17,19 @@ export const Container = styled.div`
     font-size:30px;
     margin-bottom: 20px;
   }
+  h2{
+    flex:1;
+    color: #ff5100;
+    font-size:24px;
+    margin-bottom: 20px;
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-style: italic;
+  }
 
   p{
     font-family: 'Ubuntu';
-    line-height: 20px;
+    line-height: 24px;
     text-align: justify;
   }
 
@@ -34,7 +43,7 @@ export const Limitation = styled.div`
   width: 100%;
   justify-content: space-between;
   padding: 30px 20px;
-  align-items: center;
+
 
   @media (max-width: 865px){
     justify-content: center;
@@ -52,6 +61,14 @@ export const RightBox = styled.div`
   flex-direction: column;
   padding-top: 30px;
   font-weight: 300;
+
+
+  span {
+      color: #ff5100;
+      font-size: 20px;
+      font-family: 'Ubuntu';
+      font-weight: 500;
+    }
 `;
 
 export const LeftBox = styled.div`
@@ -60,7 +77,7 @@ export const LeftBox = styled.div`
   padding-bottom: 30px;
   font-weight: 300;
 
-  h1{ text-align: right}
+  h2{ text-align: right}
 
   strong{
     font-family: Ubuntu;

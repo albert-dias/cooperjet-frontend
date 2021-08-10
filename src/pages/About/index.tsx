@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Limitation, RightBox, LeftBox} from './styles';
+import { Container, Limitation, RightBox, LeftBox } from './styles';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
@@ -8,27 +8,28 @@ import ImageE from '../../assets/img2.png';
 
 
 const About: React.FC = () => {
-  return(
+  return (
     <>
-      <Menu/>
+      <Menu />
       <Container>
         <Limitation>
-        <img src={ImageE} alt="Imagem lado esquerdo" width="100%" />
+          <img src={ImageE} alt="Imagem lado esquerdo" width="100%" />
           <RightBox>
-            <h1>Nossa história</h1>
-            <p>&nbsp;&nbsp;&nbsp;Uma empresa criada ao perceber a necessidade de nossa cidade no serviço de delivery com entregas rápidas e de qualidade.</p>
-            <p>&nbsp;&nbsp;&nbsp;Buscando sempre a melhor forma para atender nossos clientes, desde a fundação prestando um trabalho de excelência, fundada no ano de 2018 inicialmente com 2 motoboy, a Cooperjet hoje conta com mais de 200 profissionais capacitatos.</p>
+            <h1>Cooperjet</h1>
+
+            <p>&nbsp;&nbsp;&nbsp;Fundada em Abril de 2018, a Cooperjet surgiu para criar um serviço de entregas que facilitasse a vida de seus clientes. Atualmente, a Cooperjet opera em Natal e toda grande Natal com mais de 500 entregadores parceiros.
+              Por meio de aplicativos móveis e do nosso site, a Cooperjet  ajuda usuários a transportar o que importa, conectando-os a entregadores parceiros ao redor do mundo de forma simples e transparente.
+              Nossos entregadores parceiros operam vários tipos de veículos, como carretos e utilitários, e fazem entregas de itens vários tamanhos. Motos também estão disponíveis, oferecendo soluções de entrega rápidas e de baixo custo.</p>
 
           </RightBox>
         </Limitation>
         <Limitation>
           <LeftBox>
-            <h1>Cooperjet</h1>
+            <h2>Entregas Inteligentes e práticas</h2>
 
-            <p>&nbsp;&nbsp;&nbsp;ESomos uma empresa especializada em coletas e entregas com urgência em Natal e região. Nossos Motoboys são capacitados e estão preparados para atender aos seus pedidos.</p>
-            <p>&nbsp;&nbsp;&nbsp;Cooperjet esta a mais de 2 anos no mercado de entregas rápidas atuando com coleta e entregas de documentos e pequenas encomendas, efetuando também compras, pagamentos, serviços cartorários, bancários e despachos aéreos. Nossa matriz esta instalada em Nova Parnamirim com filial e Parnamirim e brevemente em Macaíba, utilizamos software e aplicativos que nos permite monitorar em tempo real nossa equipe.
-              Atualmente atendemos com motoboy toda Natal e região, entregamos com moto até 250 km de Natal; </p>
-            <p>&nbsp;&nbsp;&nbsp;Nossos Motoboy estão capacitados para atender sua necessidade no menor tempo possivel e com atendimento exclusivo.</p>
+            <p>&nbsp;&nbsp;&nbsp;A Cooperjet se tornou o parceiro estratégico de empresas de todos os tamanhos para resolver seus problemas de entrega de última milha. Desde lojas a grandes restaurantes, redes de varejo e comércios eletrônicos, a Cooperjet ajuda empresas de uma ampla variedade de mercados a entregar seus produtos de acordo com suas necessidades.
+              Graças ao nosso serviço de entrega no mesmo dia e funcionalidades como o rastreamento do pedido em tempo real, as empresas não precisam mais investir na operação e manutenção de frotas internas.
+              Além disso, você pode pagar pelos pedidos por meio da nossa carteira virtual e receber recibos digitais por e-mail. Clientes corporativos têm ainda suporte diferenciado e condições especiais de pagamento. Será um prazer contribuir para o sucesso da sua empresa!</p>
           </LeftBox>
           <img src={ImageD} alt="Imagem lado direito" width="100%" />
         </Limitation>
@@ -39,7 +40,7 @@ const About: React.FC = () => {
               height="200px"
               title="Endereço Matriz">
             </iframe>
-            <p><strong>Matriz: </strong>R. Peroba, 55A, Nova Parnamirim, Natal - RN </p>
+            <p><strong>Filial: </strong>R. Peroba, 55A, Nova Parnamirim, Natal - RN </p>
             <p><strong>Telefone: </strong>(84) 98880-6878 / 2010-6394</p>
           </LeftBox>
           <LeftBox>
@@ -48,7 +49,7 @@ const About: React.FC = () => {
               height="200px"
               title="Endereço filial">
             </iframe>
-            <p><strong>Filial: </strong>R. Governador Juvenal Lamartine, 566b - Boa Esperança, Zona Leste, Parnamirim - RN</p>
+            <p><strong>Matriz: </strong>R. Governador Juvenal Lamartine, 566b - Boa Esperança, Zona Leste, Parnamirim - RN</p>
             <p><strong>Telefone: </strong>(84) 3272-1763</p>
           </LeftBox>
         </Limitation>

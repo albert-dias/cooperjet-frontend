@@ -1,53 +1,54 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 
-import {  Container,
-          Limitation,
-          Companies,
-          CardsGrid,
-          Card,
-          Section,
-          Feedback,
-          Feedbacks,
-          PillarsSection,
-          Pillars,
-          PillarCard,
-          Transition,
-        } from './styles';
+import {
+  Container,
+  Limitation,
+  Companies,
+  CardsGrid,
+  Card,
+  Section,
+  Feedback,
+  Feedbacks,
+  PillarsSection,
+  Pillars,
+  PillarCard,
+  Transition,
+} from './styles';
 
 import Menu from '../../components/Menu';
 import Footer from '../../components/Footer';
 
-import Gb from '../../assets/clientes/gb.png';
-import Suricato from '../../assets/clientes/suricato-2.png';
-import SaleBrasa from '../../assets/clientes/salebrasa.png';
-import TemakiExpress from '../../assets/clientes/temakiExpress.png';
-import bitzBurger from '../../assets/clientes/bitzBurger.png';
-import steakHome from '../../assets/clientes/steakHome.png';
-import poize from '../../assets/clientes/poize.png';
-import pizzariaVitoria from '../../assets/clientes/pizzariaVitoria.png';
-import nanaGelateria from '../../assets/clientes/nanaGelateria.png';
-import rafa from '../../assets/clientes/rafa.png';
-import mamaGourmet from '../../assets/clientes/mamaGourmet.png';
-import gillisBurguer from '../../assets/clientes/gillisBurguer.png';
-import fatiasPizzaria from '../../assets/clientes/fatiasPizzaria.png';
-import donBurger from '../../assets/clientes/donBurger.png';
-import curvaInBox from '../../assets/clientes/curvaInBox.png';
-import pinPizza from '../../assets/clientes/pinPizza.png';
-import seuAcaiECia from '../../assets/clientes/seuAcaiECia.png';
-import saborDePao from '../../assets/clientes/saborDePao.png';
-import mariaPitanga from '../../assets/clientes/mariaPitanga.png';
-import cafeBrigadeiro from '../../assets/clientes/cafeBrigadeiro.png';
-import natusCafe from '../../assets/clientes/natusCafe.png';
+import Gb from '../../assets/clients/1.png';
+import Suricato from '../../assets/clients/2.png';
+import SaleBrasa from '../../assets/clients/3.png';
+import TemakiExpress from '../../assets/clients/4.png';
+import bitzBurger from '../../assets/clients/5.png';
+import steakHome from '../../assets/clients/6.png';
+import poize from '../../assets/clients/7.png';
+import pizzariaVitoria from '../../assets/clients/8.png';
+import nanaGelateria from '../../assets/clients/9.png';
+import rafa from '../../assets/clients/10.png';
+import mamaGourmet from '../../assets/clients/11.png';
+import gillisBurguer from '../../assets/clients/12.png';
+import fatiasPizzaria from '../../assets/clients/13.png';
+import donBurger from '../../assets/clients/14.png';
+import curvaInBox from '../../assets/clients/15.png';
+import pinPizza from '../../assets/clients/16.png';
+import seuAcaiECia from '../../assets/clients/17.png';
+import saborDePao from '../../assets/clients/18.png';
+import mariaPitanga from '../../assets/clients/19.png';
+import cafeBrigadeiro from '../../assets/clients/20.png';
+import natusCafe from '../../assets/clients/21.png';
 
 
 
 const Home: React.FC = () => {
-  const[isUsers, setIsUsers] = useState<number>();
-  const[isQtdAppoitments, setIsQtdAppointments] = useState([]);
+  const [isUsers, setIsUsers] = useState<number>();
+  const [isQtdAppoitments, setIsQtdAppointments] = useState([]);
 
   useEffect(() => {
-    async function loadData(){
+    async function loadData() {
       const response = await api.get('/appointments/datahome');
       console.log(response.data);
 
@@ -60,7 +61,7 @@ const Home: React.FC = () => {
     loadData();
   }, [])
 
-  return(
+  return (
     <>
       <Menu />
       {/* <Campanha>
@@ -146,18 +147,19 @@ const Home: React.FC = () => {
       <Transition />
       <Section>
         <Feedbacks>
+          <h1>Ser Cooperjet é ser diferente!</h1>
           <Feedback>
-          <h2>{ isUsers && isUsers + 2}</h2>
+            <h2>{isUsers && isUsers + 323}</h2>
             <strong>Clientes satisfeitos</strong>
             <p>usam nossos serviços com frequência</p>
           </Feedback>
           <Feedback>
-            <h2>{isQtdAppoitments}</h2>
+            <h2>{528 + Number(isQtdAppoitments)}</h2>
             <strong>Ordens de serviço</strong>
             <p>Todas finalizadas com sucesso!</p>
           </Feedback>
           <Feedback>
-            <h2>{ isUsers && isUsers + 3}</h2>
+            <h2>{isUsers && isUsers + 291}</h2>
             <strong>Nos recomendam</strong>
             <p>melhorando a cada dia</p>
           </Feedback>
@@ -184,7 +186,7 @@ const Home: React.FC = () => {
           </PillarCard>
         </Pillars>
       </PillarsSection>
-      <Footer/>
+      <Footer />
     </>
   )
 }

@@ -10,7 +10,6 @@ import api from '../../services/api';
 import io from 'socket.io-client';
 
 import { Container, Limitation, GridContainer, Todos, Todo, Row, Cel } from './styles';
-
 interface RequestData{
   id: string;
   sender_id: string;

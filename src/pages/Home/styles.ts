@@ -122,11 +122,17 @@ export const Feedbacks = styled.div`
   flex-wrap: wrap;
   max-width: 960px;
   width: 100%;
-  color: #ff5100;
+  color: #00377c;
   font-family: Ubuntu;
   justify-content: center;
   align-items: center;
   padding: 100px 0 210px;
+
+  h1{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
 `;
 
 export const Feedback = styled.div`
@@ -175,7 +181,7 @@ export const Pillars = styled.div`
   flex: 1;
   max-width: 960px;
   width: 100%;
-  color: #ff5100;
+  color: #00377c;
   font-family: Ubuntu;
   justify-content: center;
   align-items: center;
